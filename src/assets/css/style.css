@@ -1,4 +1,20 @@
 @cell _max_width 800px;
+@font-face {
+  font-family: 'Lato-Heavy';
+  src: url('Lato-Heavy.woff2') format('woff2'), url('Lato-Heavy.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('.fonts/Lato-Bold.woff2') format('woff2'), url('.fonts/Lato-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato-Medium';
+  src: url('.fonts/Lato-Medium.woff2') format('woff2'), url('.fonts/Lato-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('.fonts/Lato-Regular.woff2') format('woff2'), url('.fonts/Lato-Regular.woff') format('woff');
+}
 html {
   position: relative;
   min-height: 100%;
@@ -8,9 +24,7 @@ h1 {
 }
 body {
   margin: 0;
-  font-family: sans-serif;
   color: #373737;
-  font-family: "Lato-Heavy";
 }
 a,
 button,
@@ -19,30 +33,24 @@ input {
   outline: 0 !important;
 }
 a {
-  color: #337ab7;
+  color: #000;
   text-decoration: none;
-}
-a:hover {
-  border-bottom: 3px solid #ffcf0b;
 }
 article {
   width: 100%;
 }
-main {
-  margin-bottom: 2000px;
-}
 button {
   padding: 10px 30px;
-  font-size: 0.8em;
+  font-size: 18px;
   color: #373737;
   background-color: #ffcf0b;
   text-decoration: none;
   cursor: pointer;
   transition: all ease-out 0.2s;
-  border-radius: 15px;
+  border-radius: 22px;
   border: 0px;
   box-shadow: 5px 5px 10px #DADADA;
-  height: 46px;
+  height: 44px;
 }
 button:hover {
   text-decoration: none;
@@ -55,22 +63,31 @@ button:hover {
   background-size: contain;
 }
 .small_text {
-  font-size: 0.5em;
+  font-size: 0.6em;
+}
+.header_link:hover {
+  border-bottom: 3px solid #ffcf0b;
+}
+.yellow_text {
+  color: #ffcf0b;
 }
 header {
-  height: 60px;
+  height: 80px;
   background-color: #FFF;
-  z-index: 2;
+  font-size: 14px;
+  font-family: 'Lato-Regular', sans-serif;
 }
 header > .header-container {
   padding: 0 0px;
-  box-shadow: 5px 0px 10px #DADADA;
   margin: auto;
+}
+.header-shadow {
+  box-shadow: 5px 0px 10px #DADADA;
 }
 header .logo {
   display: inline-block;
   height: 40px;
-  margin: 10px 0;
+  margin: 30px 0px 10px 60px;
 }
 header .logo img {
   height: 100%;
@@ -87,12 +104,12 @@ header nav > ul {
 }
 header nav > ul > li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 16px;
   position: relative;
   z-index: 1;
 }
 header nav > ul > li > a {
-  line-height: 60px;
+  line-height: 80px;
   color: #000;
   text-decoration: none;
 }
@@ -102,7 +119,7 @@ header nav > ul > li.active > a {
 .active_circle {
   position: absolute;
   z-index: -1;
-  top: 15px;
+  top: 25px;
   left: -5px;
   width: 18px;
   height: 18px;
@@ -114,42 +131,48 @@ main {
   display: flex;
   width: 100%;
   padding: 0 0px 10px 0px;
-  margin: 0 0 100px 0;
+  margin: 0 0 200px 0;
   flex-wrap: wrap;
 }
 #intro_text_container {
+  position: absolute;
   margin-top: 200px;
 }
 #intro_text_container > button {
   margin-top: 50px;
 }
-#intro_paragraph {
-  font-size: 1.5em;
+.intro_h2 {
+  font-size: 28px;
+  font-family: 'Lato-Medium', sans-serif;
+  text-decoration: none;
+  font-weight: normal;
+  line-height: 35px;
 }
-#yellow_circle {
+.intro_header {
+  margin-bottom: 20px;
+}
+#meijie {
+  position: relative;
   float: right;
-  margin-top: 50px;
   width: 600px;
 }
 @media screen and (max-width: 900px) {
-  #yellow_circle {
+  #meijie {
     display: none;
   }
 }
 #introduction {
-  margin: 0px 50px;
+  margin: 0px 60px;
   height: 700px;
-  /*
-  background-image: url("../img/Combined Shape.png");
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  */
+}
+.yellow_links_container {
+  margin-top: 40px;
+}
+#daily_ui {
+  margin-top: 50px;
 }
 article > h1 {
-  margin: 0px 50px 30px 50px;
+  margin: 0px 60px 30px 60px;
 }
 .img_row {
   display: flex;
@@ -167,11 +190,11 @@ article > h1 {
   }
 }
 footer {
+  height: 150px;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 10px 0;
-  margin-top: 200px;
   text-align: center;
   background-color: #eee;
   border-top: 1px solid #ccc;
@@ -179,10 +202,10 @@ footer {
 footer > ul {
   display: inline-block;
   padding: 0;
-  margin: 0 10px 0 0;
+  margin: 0;
   list-style: none;
 }
 footer > ul > li {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 16px;
 }
