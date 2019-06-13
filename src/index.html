@@ -6,9 +6,17 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <script type="text/javascript" src="./assets/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/common.js"></script>
-  <script type="text/javascript" src="./assets/js/controllers/HeaderController.js"></script>
+  <script type="text/javascript" src="./assets/js/controllers/FrontPageController.js"></script>
 </head>
 <body>
+  <!--
+  <div class="dont-delete-me" onsubmit="return false;">
+    <form class="w3-container">
+      <input type="text" id="password" name="password" placeholder="password"><br>
+      <button id="unlock_button">unlock</button>
+    </form>
+  </div>
+-->
   <header>
     <div class="header-container">
       <div class="logo">
@@ -38,7 +46,10 @@
         </div>
     </article>
     <article id="case_studies">
-      <h1>Case Studies</h1>
+      <div class="fancy_title_container">
+        <h1 class="ghost_title">Case Studies</h1>
+        <h1>Case Studies</h1>
+      </div>
       <div class="img_row2">
 
         <div class="img_container">
@@ -90,7 +101,10 @@
       </div>
     </article>
     <article id="daily_ui">
-      <h1>My Daily UI challenge (70 days, still counting...)</h1>
+      <div class="fancy_title_container">
+        <h1>My Daily UI challenge</h1>
+        <h1 class="ghost_title">My Daily UI challenge</h1>
+      </div>
       <div class="img_row1">
         <img src="./assets/img/daily_ui.png">
       </div>
