@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	router.goToMainPage();
+	headerController.setOnclickListeners();
 	/*
 	$('main').hide();
 	$('header').hide();

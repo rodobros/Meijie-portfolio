@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <script type="text/javascript" src="./assets/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/common.js"></script>
+  <script type="text/javascript" src="./assets/js/router.js"></script>
+  <script type="text/javascript" src="./assets/js/controllers/HeaderController.js"></script>
   <script type="text/javascript" src="./assets/js/controllers/FrontPageController.js"></script>
 </head>
 <body>
@@ -16,7 +18,7 @@
       <button id="unlock_button">unlock</button>
     </form>
   </div>
--->
+  -->
   <header>
     <div class="header-container">
       <div class="logo">
@@ -24,15 +26,16 @@
       </div>
       <nav>
         <ul>
-          <li class="active"><a class="header_link" href="./index.html">Work</a><div class="active_circle"></div></li>
-          <li><a class="header_link" href="./about.html">About</a></li>
-          <li><a class="header_link" href="./photography.html">Photography</a></li>
-          <li><a class="header_link" href="./resume.html">Resume</a></li>
+          <li id="work_header_link" class="active"><a class="header_link" href="#">Work</a><div class="active_circle"></div></li>
+          <li id="about_header_link"><a class="header_link" href="#">About</a></li>
+          <li id="photo_header_link"><a class="header_link" href="#">Photography</a></li>
+          <li id="resume_header_link"><a class="header_link" href="#">Resume</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
+    <!--
     <article id="introduction">
         <img alt="me" src="./assets/img/me.png" id="meijie">
         <div id="intro_text_container">
@@ -109,6 +112,7 @@
         <img src="./assets/img/daily_ui.png">
       </div>
     </article>
+      -->
   </main>
   <footer>
     <h1>Get in touch!</h1>
@@ -121,5 +125,6 @@
     </ul>
     <p class="small_text">&copy; Website designed by Mei Jie Li</p>
   </footer>
+
   </body>
 </html>

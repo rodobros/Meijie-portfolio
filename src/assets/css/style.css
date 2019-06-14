@@ -16,6 +16,7 @@
 }
 html {
   position: relative;
+  min-height: 100%;
   font-family: 'Lato-Regular', Fallback, sans-serif;
 }
 h1 {
@@ -181,6 +182,11 @@ header nav > ul > li.active > a {
   border-radius: 18px;
   color: #ffdc0b;
   background: #ffdc0b;
+}
+.centered_title {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
 }
 main {
   display: flex;
