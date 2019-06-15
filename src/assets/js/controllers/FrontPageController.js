@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	router.goToMainPage();
 	headerController.setOnclickListeners();
+	
 	/*
 	$('main').hide();
 	$('header').hide();
@@ -8,7 +9,7 @@ $(document).ready(function() {
 	$('.dont-delete-me').show();
 
 	$("#unlock_button").click(function() {
-	  	if($("#password").val() == "qwerty") {
+	  	if($("#password").val() == "maggieli") {
 			$('main').show();
 			$('header').show();
 			$('footer').show();

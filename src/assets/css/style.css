@@ -104,7 +104,6 @@ button:hover {
 .contact_me_link:hover {
   color: #febc19;
 }
-/*
 .dont-delete-me {
   width: 100%;
   height: 100%;
@@ -112,26 +111,25 @@ button:hover {
   vertical-align: middle;
   z-index: 10;
   background-color: white;
-  position:relative;
-  > form {
-    position:absolute;
-    top:50%;
-    right:0;
-    left:0;
-    > * {
-      margin-top: 20px;
-    }
-    > input {
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-  }
+  position: relative;
 }
-*/
+.dont-delete-me > form {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+}
+.dont-delete-me > form > * {
+  margin-top: 20px;
+}
+.dont-delete-me > form > input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 header {
   height: 80px;
   background-color: rgba(0, 0, 0, 0);
@@ -343,17 +341,33 @@ article {
 .about_img_container {
   margin-right: 5%;
 }
-.about_img {
+.about_img_small {
+  display: none;
   width: 100%;
+  height: auto;
+}
+.about_img_big {
+  width: 100%;
+  display: inline-block;
+  margin-right: 5%;
   height: auto;
 }
 .about_text_container {
   text-align: left;
-  margin: -5% 20% 0 20%;
+  margin: -5% 25% 0 25%;
 }
 @media screen and (max-width: 900px) {
   .about_text_container {
     margin: 0 5% 0 5%;
+  }
+  .about_img_container {
+    margin: 0 5% 0 5%;
+  }
+  .about_img_small {
+    display: block;
+  }
+  .about_img_big {
+    display: none;
   }
 }
 footer {
