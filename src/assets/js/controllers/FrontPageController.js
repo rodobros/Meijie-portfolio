@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	//router.init();
 	router.goToMainPage();
 	headerController.setOnclickListeners();
 	
