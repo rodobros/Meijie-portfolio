@@ -145,6 +145,12 @@ button:hover {
   border-radius: 4px;
   box-sizing: border-box;
 }
+.no-display {
+  display: none;
+}
+.whitish {
+  background-color: #ffffff;
+}
 header {
   height: 80px;
   background-color: rgba(0, 0, 0, 0);
@@ -210,6 +216,43 @@ header nav > ul > li.active > a {
   width: 100%;
   text-align: center;
 }
+.ham_container {
+  display: none;
+  margin: 20px 60px;
+  cursor: pointer;
+  float: right;
+}
+.ham_turned {
+  transform: rotate(90deg);
+}
+.ham_menu_container {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0px 8px 8px -8px #DADADA;
+}
+.ham_menu_container > ul {
+  font-size: 28px;
+  line-height: 35px;
+  text-align: right;
+  float: right;
+  margin-right: 60px;
+  list-style: none;
+}
+.ham_menu_container > ul > li {
+  margin: 30px 0;
+}
+@media screen and (max-width: 900px) {
+  .ham_container {
+    display: inline-block;
+  }
+  header nav {
+    display: none;
+  }
+}
+.ham_selected > a {
+  color: #ffdc0b;
+}
 main {
   display: flex;
   width: 100%;
@@ -232,7 +275,7 @@ main {
   float: right;
   width: 600px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   #meijie {
     display: none;
   }
@@ -394,14 +437,47 @@ article {
   }
 }
 .daily_ui_container {
-  display: flex;
+  display: inline-flex;
   /* or inline-flex */
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 .daily_ui_container > img {
-  max-width: 33%;
-  min-width: 400px;
+  width: 33%;
+  height: 100%;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .daily_ui_container > img {
+    width: 100% !important;
+  }
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1200px) {
+  .daily_ui_container > img {
+    width: 50%;
+  }
+}
+.photo_page_container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.photo_column {
+  flex: 49%;
+  max-width: 49%;
+  padding: 0 4px;
+}
+.photo_column > img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .photo_column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 /*
 .daily_ui_row {
@@ -422,20 +498,6 @@ article {
   width: 100%;
 }
 */
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
 footer {
   height: 300px;
   position: absolute;

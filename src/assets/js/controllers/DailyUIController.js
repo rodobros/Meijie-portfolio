@@ -1,8 +1,8 @@
 var DailyUIController = {};
 
-DailyUIController.numberOfImages = 70;
+DailyUIController.numberOfImages = 71;
 
-DailyUIController.gifImages = [14, 25, 44];
+DailyUIController.gifImages = [14, 25, 44, 63, 71];
 DailyUIController.doubleImage = [41]
 
 $(document).ready(() => {
