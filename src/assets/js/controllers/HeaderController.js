@@ -9,7 +9,9 @@ headerController.headerLinksIds = [ "work_header_link",
 					"about_header_link_ham",
 					"photo_header_link_ham",
 					"resume_header_link_ham",
-					"dailyui_header_link_ham"];
+					"dailyui_header_link_ham",
+					"case_header_link",
+					"case_header_link_ham"];
 
 headerController.activeCircleString = "<div class=\"active_circle\"></div>";
 
@@ -70,9 +72,16 @@ headerController.setOnclickListeners = function() {
 		router.goToDailyUIPage();
 	})
 
+	$("#" + headerController.headerLinksIds[10]).click(() => {
+		headerController.setCaseSelected();
+		router.goToCase1Page();
+	})
+	$("#" + headerController.headerLinksIds[11]).click(() => {
+		
+	})
+
 	$(".ham_container").click(() => {
 		headerController.removeHam($(".ham_container").hasClass("ham_turned"));
-			
 	})
 }
 
@@ -122,6 +131,11 @@ headerController.setPhotoPageSelected = function() {
 headerController.setDailyUISelected = function() {
 	headerController.removeSelectedHeaderLink();
 	headerController.selectHeaderLink(headerController.headerLinksIds[4]);
+}
+
+headerController.setCaseSelected = function() {
+	headerController.removeSelectedHeaderLink();
+	headerController.selectHeaderLink(headerController.headerLinksIds[10]);
 }
 
 

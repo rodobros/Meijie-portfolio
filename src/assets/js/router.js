@@ -53,5 +53,5 @@ router.goToDailyUIPage = function () {
 }
 
 router.goToCase1Page = function() {
-	$("main").load("./photo.html");
+	$("main").load("./case1.html");
 }

@@ -6,5 +6,10 @@ $(document).ready(function() {
 
 	$("#dailyui_link").click(() => {
 		router.goToDailyUIPage();
+		headerController.setDailyUISelected();
+	})
+
+	$("#case_1").click(() => {
+		router.goToCase1Page();
 	})
 });
