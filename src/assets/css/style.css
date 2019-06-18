@@ -545,3 +545,18 @@ footer > .footer_text_container > ul > li {
 footer > .footer_text_container > * {
   margin: 15px 0;
 }
+@media screen and (max-width: 900px) {
+  footer > .footer_text_container > ul > li {
+    margin: 0 30px;
+  }
+  footer > .footer_text_container > ul > li > a > img {
+    height: 35px;
+    width: 35px;
+  }
+  footer > .footer_text_container > * {
+    margin: 20px 0;
+  }
+  .small_text {
+    font-size: 15px;
+  }
+}

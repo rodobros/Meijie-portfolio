@@ -14,9 +14,11 @@ headerController.headerLinksIds = [ "work_header_link",
 headerController.activeCircleString = "<div class=\"active_circle\"></div>";
 
 headerController.removeSelectedHeaderLink = function() {
+	headerController.removeHam(true);
 	$(".active_circle").remove();
 	$(".active").removeClass("active");
 	$(".ham_selected").removeClass("ham_selected");
+
 }
 
 headerController.selectHeaderLink = function(selectedHeader) {
@@ -69,18 +71,23 @@ headerController.setOnclickListeners = function() {
 	})
 
 	$(".ham_container").click(() => {
-		if ($(".ham_container").hasClass("ham_turned")) {
-			$(".ham_container").removeClass("ham_turned");
-			$(".ham_menu_container").addClass("no-display");
-			$("header").removeClass("whitish");
-			$(".ham_menu_container").removeClass("whitish");
-		} else {
-			$(".ham_container").addClass("ham_turned");
-			$(".ham_menu_container").removeClass("no-display");
-			$("header").addClass("whitish");
-			$(".ham_menu_container").addClass("whitish");
-		}
+		headerController.removeHam($(".ham_container").hasClass("ham_turned"));
+			
 	})
+}
+
+headerController.removeHam = function(shouldRemoveHam) {
+	if (shouldRemoveHam) {
+		$(".ham_container").removeClass("ham_turned");
+		$(".ham_menu_container").addClass("no-display");
+		$("header").removeClass("whitish");
+		$(".ham_menu_container").removeClass("whitish");
+	} else {
+		$(".ham_container").addClass("ham_turned");
+		$(".ham_menu_container").removeClass("no-display");
+		$("header").addClass("whitish");
+		$(".ham_menu_container").addClass("whitish");
+	}
 }
 
 headerController.makeHeaderTransparent = function(shouldMakeTransparent) {
