@@ -20,7 +20,6 @@ headerController.removeSelectedHeaderLink = function() {
 	$(".active_circle").remove();
 	$(".active").removeClass("active");
 	$(".ham_selected").removeClass("ham_selected");
-
 }
 
 headerController.selectHeaderLink = function(selectedHeader) {
@@ -73,10 +72,22 @@ headerController.setOnclickListeners = function() {
 	})
 
 	$("#" + headerController.headerLinksIds[10]).click(() => {
-		headerController.setCaseSelected();
-		router.goToCase1Page();
+		headerController.setWorkPageSelected();
+		router.goToMainPage(function() {
+			$([document.documentElement, document.body]).animate({
+        		scrollTop: $("#case_studies").offset().top
+    		}, 2);
+    		headerController.removeHam(true);
+		});
 	})
 	$("#" + headerController.headerLinksIds[11]).click(() => {
+		headerController.setWorkPageSelected();
+		router.goToMainPage(function() {
+			$([document.documentElement, document.body]).animate({
+        		scrollTop: $("#case_studies").offset().top
+    		}, 2);
+    		headerController.removeHam(true);
+		});
 		
 	})
 

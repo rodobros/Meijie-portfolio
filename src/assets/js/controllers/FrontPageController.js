@@ -3,7 +3,7 @@ $(document).ready(function() {
 	router.goToMainPage();
 	headerController.setOnclickListeners();
 	
-	/*
+	
 	$('main').hide();
 	$('header').hide();
 	$('footer').hide();
@@ -17,6 +17,6 @@ $(document).ready(function() {
 			$('.dont-delete-me').hide();
 		}
 	})
-	*/
+	
 });
 

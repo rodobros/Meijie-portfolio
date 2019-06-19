@@ -32,8 +32,8 @@ router.routeHandler = (evt) => {
     router.resolveRoute(route.toLowerCase());
 };
 
-router.goToMainPage = function() {
-	$("main").load("./main_page.html");
+router.goToMainPage = function(cb) {
+	$("main").load("./main_page.html", cb);
 }
 
 router.goToAboutPage = function() {
