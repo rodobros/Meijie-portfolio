@@ -34,6 +34,8 @@
 
 @case1_color: #e9e7cb;
 
+@case_margin: 300px;
+
 //fonts
 @font-face {
   font-family: 'Lato-Heavy';
@@ -173,6 +175,9 @@ button {
 
 .contact_me_link {
   font-size: 18px;
+}
+
+.blue_link {
   font-family: 'Lato-Medium', sans-serif;
   color: #0057ff;
   &:hover {
@@ -615,7 +620,7 @@ article {
 
 // ----- Case Section -----
 .case_container {
-  margin: 0 15%;
+  margin: 0 13%;
   > * {
     margin-bottom: 80px;
   }
@@ -625,7 +630,7 @@ article {
   font-family: 'Lato-Bold', sans-serif;
   vertical-align: top;
   margin-right: 100px;
-  width: 350px;
+  width: @case_margin;
   margin-top:120px;
   margin-bottom: 0;
 }
@@ -634,7 +639,7 @@ article {
   font-family: 'Lato-Bold', sans-serif;
   float:left;
   //margin-right: 100px;
-  width: 350px;
+  width: @case_margin;
   /*
   > .case_section_title {
     display: inline-block;
@@ -646,19 +651,23 @@ article {
     display: inline-block;
     border-bottom: 5px solid @case1_color;
   }
-  //top:24px;
+  > .case_section_title {
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+}
+
+.no_margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .case_description {
   > p {
     display: inline-block;
     margin-bottom: 40px;
-     > a {
-      color: #0000EE;
-      cursor: pointer;
-     }
   }
-  margin-left: 350px;
+  margin-left: @case_margin;
 }
 
 .clear {
@@ -675,15 +684,21 @@ article {
   height: 8px;
 }
 
+/*
 .center_container {
   width: 100%;
   text-align: center;
   margin-top: 0;
   margin-bottom: 120px;
 }
+*/
 
 .case1_button {
   background-color: @case1_color;
+}
+
+.case_description.with_button {
+  text-align: center;
 }
 
 .case1_ul_container {
@@ -691,45 +706,34 @@ article {
   width: 100%;
   > .case1_ul_1 {
     float:left;
-    width: 400px;
+    width: 50%;
     > ul {
-      padding-left: 10px;
+      padding-left: 12px;
     }
   }
   > .case1_ul_2 {
-    margin-left: 400px;
+    margin-left: 50%;
     > ul {
-      padding-left: 10px;
+      padding-left: 12px;
     }
   }
 }
 
 .case1_img {
+  cursor: pointer;
   width: 100%;
   position: relative;
 }
 
-.img_1_0 {
-
+.case_title_description_container.first_case_title_desc_pair  {
+  margin-bottom: 60px;
 }
 
-.img_1_1 {
-  
+.case_title_description_container.more_margin_after {
+  margin-bottom: 120px;
 }
 
-.img_1_2 {
-  
-}
-
-.img_2_1 {
-  
-}
-
-.case_title_description_container  {
- 
-}
-
-.no_margin {
+.less_margin_case_pair {
    margin-bottom: 40px !important;
 }
 
@@ -743,14 +747,14 @@ article {
     margin-bottom: 0;
   }
   > ul {
-    padding-left: 10px;
+    padding-left: 12px;
   }
 }
 
 .case1_header {
   margin-left: 100px;
   margin-right: 100px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   position: relative;
   overflow: hidden;
   left: 50%;
@@ -762,21 +766,64 @@ article {
   }
   .case1_header_box {
     > h1 {
+      font-size: 30px;
       margin-top: 0;
     }
-    padding: 50px;
+    > p {
+      font-size: 12px;
+    }
+    padding: 20px;
     width: 300px;
-    height: 450px;
+    height: 350px;
     background-color: white;
     box-shadow: 5px 5px 10px @shadow_color;
     position: absolute;
     right: 200px;
-    top: 50px;
+    top: 100px;
   }
 
   &:after {
     clear:both;
   }
+}
+
+.overlay {
+  overflow-y: scroll;
+  max-height: 100%;
+  > #img_in_overlay {
+    overflow-x: scroll;
+    z-index: 11;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
+  > #dismiss_button {
+    position: fixed;
+    top: 70px;
+    right: 70px;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    height:45px;
+    width: 45px;
+    text-align: center;
+    > p {
+      font-s
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.8); /*dim the background*/
 }
 
 // ----- Case 1 Section -----
