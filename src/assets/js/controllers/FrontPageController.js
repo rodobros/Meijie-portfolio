@@ -2,6 +2,7 @@ $(document).ready(function() {
 	//router.init();
 	router.goToMainPage();
 	headerController.setOnclickListeners();
+
 	
 	/*
 	$('main').hide();

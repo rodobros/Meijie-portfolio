@@ -482,10 +482,10 @@ article {
   }
 }
 .case_container {
-  margin: 0 13%;
+  margin: 0 10%;
 }
 .case_container > * {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 .case_supertitle {
   font-family: 'Lato-Bold', sans-serif;
@@ -526,6 +526,13 @@ article {
   display: inline-block;
   margin-bottom: 40px;
 }
+.case_description > .center_container {
+  width: 100%;
+  text-align: center;
+}
+.case_description > .center_container > .proto_gif {
+  margin-bottom: 40px;
+}
 .clear {
   clear: both;
 }
@@ -561,21 +568,23 @@ article {
   width: 50%;
 }
 .case1_ul_container > .case1_ul_1 > ul {
-  padding-left: 12px;
+  padding-left: 13px;
 }
 .case1_ul_container > .case1_ul_2 {
   margin-left: 50%;
 }
 .case1_ul_container > .case1_ul_2 > ul {
-  padding-left: 12px;
+  padding-left: 13px;
 }
 .case1_img {
-  cursor: pointer;
   width: 100%;
   position: relative;
 }
+.click_to_overlay {
+  cursor: pointer;
+}
 .case_title_description_container.first_case_title_desc_pair {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .case_title_description_container.more_margin_after {
   margin-bottom: 120px;
@@ -583,17 +592,21 @@ article {
 .less_margin_case_pair {
   margin-bottom: 40px !important;
 }
+.zero_margin_bot {
+  margin-bottom: 0px !important;
+}
 .case_reflection > h3 {
   font-weight: bold;
   margin-bottom: 0;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .case_reflection > p {
   margin-bottom: 0;
 }
 .case_reflection > ul {
-  padding-left: 12px;
+  padding-left: 13px;
 }
+/*
 .case1_header {
   margin-left: 100px;
   margin-right: 100px;
@@ -603,36 +616,71 @@ article {
   left: 50%;
   width: 1400px;
   transform: translateX(-50%);
+  .case1_header_img {
+    width: 70%;
+    float: left;
+  }
+  .case1_header_box {
+    > h1 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+    > p {
+      font-size: 12px;
+    }
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    background-color: white;
+    box-shadow: 5px 5px 10px @shadow_color;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+  }
+
+  &:after {
+    clear:both;
+  }
+}
+*/
+.case1_header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.case1_header .case1_header_img_container {
+  display: inline-block;
+  margin-left: 10%;
+  width: calc(80% - 225px);
 }
 .case1_header .case1_header_img {
-  width: 70%;
-  float: left;
+  width: 100%;
 }
 .case1_header .case1_header_box {
-  padding: 20px;
-  width: 300px;
-  height: 350px;
+  position: absolute;
   background-color: white;
   box-shadow: 5px 5px 10px #DADADA;
-  position: absolute;
-  right: 200px;
-  top: 100px;
+  right: 0;
+  margin-right: 10%;
+  padding: 25px;
+  width: 400px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .case1_header .case1_header_box > h1 {
-  font-size: 30px;
+  font-size: 40px;
   margin-top: 0;
 }
 .case1_header .case1_header_box > p {
-  font-size: 12px;
+  font-size: 16px;
 }
-.case1_header:after {
-  clear: both;
+.case1_header .case1_header_box > .header_box_last_p {
+  margin-bottom: 0;
 }
 .overlay {
-  overflow-y: scroll;
-  max-height: 100%;
   display: none;
   position: absolute;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 100%;
@@ -641,14 +689,13 @@ article {
   background-color: rgba(0, 0, 0, 0.8);
   /*dim the background*/
 }
-.overlay > #img_in_overlay {
-  overflow-x: scroll;
-  z-index: 11;
+.overlay .overlay_img_container {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  bottom: 0;
+  overflow: scroll;
+  text-align: center;
 }
 .overlay > #dismiss_button {
   position: fixed;
@@ -660,10 +707,12 @@ article {
   font-size: 50px;
   height: 45px;
   width: 45px;
+  z-index: 20;
   text-align: center;
 }
 .overlay > #dismiss_button > p {
-  font-stop: 50%;
+  z-index: 20;
+  top: 50%;
   transform: translateY(-50%);
 }
 footer {

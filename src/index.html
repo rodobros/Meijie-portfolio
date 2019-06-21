@@ -7,10 +7,17 @@
   <script type="text/javascript" src="./assets/js/libs/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/common.js"></script>
   <script type="text/javascript" src="./assets/js/router.js"></script>
+  <script type="text/javascript" src="./assets/js/ImageOverlayManager.js"></script>
   <script type="text/javascript" src="./assets/js/controllers/HeaderController.js"></script>
   <script type="text/javascript" src="./assets/js/controllers/FrontPageController.js"></script>
 </head>
 <body>
+  <div class="overlay">
+    <p id="dismiss_button">&#10006;</p>
+    <div class="overlay_img_container">
+      <img id="img_in_overlay" src="./assets/img/case1/1.0Process-min.png">
+    </div>
+  </div>
   <!--
   <div class="dont-delete-me" onsubmit="return false;">
     <form class="w3-container">

@@ -1,14 +1,15 @@
 <script type="text/javascript" src="./assets/js/controllers/Case1Controller.js"></script>
-<div class="overlay"><p id="dismiss_button">&#10006;</p><img id="img_in_overlay" src="./assets/img/case1/1.0Process-min.png"></div>
 <article id="case1_container">
 	<div class="case1_header">
-		<img class="case1_header_img" src="./assets/img/case1/0.Main Image-min.png">
+		<div class="case1_header_img_container">
+			<img class="case1_header_img" src="./assets/img/case1/0.Main Image-min.png">
+		</div>
 		<div class="case1_header_box">
 			<h1>Mirror</h1>
 			<p>A class project for a fast-fashion clothing store. Mirror is based in Canada. They sell ready-to-wear clothes, accessories for women, men, and kids. Research suggests that the current frustrations consumers facing for online clothing shopping are mainly due to <b>lack of size information</b> and <b>cluttered sales information</b> on the web.</p>
 			<p><b>Roles:</b> User Research, Information Architecture, UX/UI Design, Prototype, Testing.</p>
 			<p><b>Tools:</b> Sketch, Illustrator, InVision, Zeplin, Photoshop</p>
-			<p><b>Duration:</b> May 2019</p>
+			<p class="header_box_last_p"><b>Duration:</b> May 2019</p>
 		</div>
 	</div>
 	<div class="case_container">
@@ -22,27 +23,18 @@
 	    	<div class="clear"></div>
 		</div>
 
-		<div class="case_title_description_container">
+		<div class="case_title_description_container more_margin_after">
 			<div class="case_title">
 	    		<h3 class="case_subsection_title">Proposed Solution<!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
 	    	<div class="case_description">
 	    		<p>Design a modern, clean and distraction-free Mirror experience with an emphasize on customer reviews section to boost consumer confidence. Key features: comprehensive customer review section with images, sort by and filter functions for review sections, customer sizing scale function.</p>
+	    		<div class="center_container">
+	    			<img class="proto_gif" src="./assets/img/case1/prototype.gif">
+	    			<br> 
+	    			<button class="case1_button" id="test_prototype_button">TEST PROTOTYPE</button>
+	    		</div> 
 	    	</div> 
-		</div>
-
-		<div class="case_title_description_container less_margin_case_pair">
-			<div class="case_title"></div>
-	    	<div class="case_description">
-	    		<img src="./assets/img/case1/prototype.gif">
-	    	</div>
-		</div>
-
-		<div class="case_title_description_container">
-			<div class="case_title"></div>
-	    	<div class="case_description with_button">
-	    		<button class="case1_button" id="test_prototype_button">TEST PROTOTYPE</button> 
-	    	</div>
 		</div>
 
 		<div class="case_title_description_container more_margin_after">
@@ -64,7 +56,7 @@
 	    	<div class="case_description">
 	    		<p>The first step is to gain empathy towards users by understanding their needs and pain point.
 I began my project by conducting market research to learn about current market trend. since e-commerce is a mature market, there’s a lot of existing resources online. This allowed me to better understand the importance of e-commerce.</p>
-				<img class="case1_img img_1_1" src="./assets/img/case1/1.1Market research-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/1.1Market research-min.png">
 	    	</div>
 		</div>
 
@@ -74,7 +66,7 @@ I began my project by conducting market research to learn about current market t
 	    	</div> 
 	    	<div class="case_description">
 	    		<p>I then did a competitive analysis to learn about current market trends as well as identifying strengths and weaknesses of existing online retail stores.  This allowed me to see how Mirror can position itself against competing companies.</p>
-				<img class="case1_img img_1_2" src="./assets/img/case1/1.2Competitieve Analysis-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/1.2Competitieve Analysis-min.png">
 	    	</div>
 		</div>
 
@@ -120,7 +112,7 @@ I began my project by conducting market research to learn about current market t
 	    	<div class="case_description">
 	    		<p>This stage is to clarify details of what will be created, for who and how.
 Using the insights from previous research, I identified my target audience as young, working professionals who want to <b>keep up with the latest trends without breaking the bank.</b> I synthesized my user research findings into a persona: Kylie Obrien. By giving personality to the research data, we can better empathize with the target user throughout the design process. </p>
-				<img class="case1_img img_2_1" src="./assets/img/case1/2.1Persona-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/2.1Persona-min.png">
 	    	</div>
 		</div>
 
@@ -130,7 +122,7 @@ Using the insights from previous research, I identified my target audience as yo
 	    	</div>
 	    	<div class="case_description">
 	    		<p>To better understand the experiences our users go through when problem occurs, I created a storyboard for the persona. This helped to define how Mirror’s website would solve users’ problem.</p>
-				<img class="case1_img img_2_2" src="./assets/img/case1/2.2 Storyboards-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/2.2 Storyboards-min.png">
 	    	</div>
 		</div>
 
@@ -140,7 +132,7 @@ Using the insights from previous research, I identified my target audience as yo
 	    	</div>
 	    	<div class="case_description">
 	    		<p>Being an online clothes shopping platform with massive choices of product, as such a site map was crucial to visualize the high-level content. With the help from <a class="blue_link" href="./assets/img/case1/2.2.2Card sorting-min.png">open card sorting exercises</a> and existing design patterns for e-commerce websites, I created the following site map. This helped me to layout the website clearly.</p>
-				<img class="case1_img img_2_3" src="./assets/img/case1/2.3.0Sitemap-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/2.3.0Sitemap-min.png">
 	    	</div>
 		</div>
 
@@ -150,24 +142,24 @@ Using the insights from previous research, I identified my target audience as yo
 	    	</div>
 	    	<div class="case_description">
 	    		<p>To further analyze the flow, I created a <a class="blue_link" href="./assets/img/case1/2.3.1.Mirror task flow-min.png">task flow</a> that shows the most essential steps a user need to go through when buying a product, and then a user flow which included a few paths in which the user might interact with the site. This allowed me to effectively identify key screens and how they should relate to each other based on user decisions.</p>
-				<img class="case1_img img_2_4" src="./assets/img/case1/2.4Userflow1-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/2.4Userflow1-min.png">
 	    	</div>
 		</div>
 
 
 
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container">
 			<div class="case_title">
 				<h3 class="case_section_title">DESIGN</h3>
 	    		<h3 class="case_subsection_title no_margin">3.1 Low-fidelity Wireframes<!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
 	    	<div class="case_description">
 	    		<p>This stage is to identify solutions to problem through designs After identifying the key pages I would be designing for based on user research findings, I began sketching out home page on paper to brainstorm ideas for different layouts through low-fidelity wireframes. This helped me to quickly and efficiently get feedback before deciding on which direction to move on.</p>
-	    		<img class="case1_img img_2_1" src="./assets/img/case1/3.2.0wireframe 1-min.png">
+	    		<img class="case1_img click_to_overlay" src="./assets/img/case1/3.2.0wireframe 1-min.png">
 	    	</div>
 		</div>
 
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container zero_margin_bot">
 			<div class="case_title">
 	    		<h3 class="case_subsection_title">3.2 Mid-fidelity Wireframes<!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
@@ -180,7 +172,7 @@ Using the insights from previous research, I identified my target audience as yo
 	    		<h3>Home & Produt Page</h3>
 	    	</div>
 	    	<div class="case_description">
-				<img class="case1_img img_2_1" src="./assets/img/case1/3.2.0Desktop_Home page-min 2.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/3.2.0Desktop_Home page-min 2.png">
 	    	</div>
 		</div>
 		<div class="case_title_description_container">
@@ -188,12 +180,12 @@ Using the insights from previous research, I identified my target audience as yo
 	    		<h3>Search result & Checkout Page</h3>
 	    	</div>
 	    	<div class="case_description">
-				<img class="case1_img img_2_1" src="./assets/img/case1/3.2.0wireframe 2-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/3.2.0wireframe 2-min.png">
 	    	</div>
 		</div>
 
 
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container zero_margin_bot">
 			<div class="case_title">
 	    		<h3 class="case_subsection_title">3.3 Branding<!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
@@ -206,12 +198,12 @@ Using the insights from previous research, I identified my target audience as yo
 	    		<h3>Style Tile</h3>
 	    	</div>
 	    	<div class="case_description">
-				<img class="case1_img img_2_1" src="./assets/img/case1/3.3.1Style tile-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/3.3.1Style tile-min.png">
 	    	</div>
 		</div>
 
 
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container zero_margin_bot">
 			<div class="case_title">
 	    		<h3 class="case_subsection_title">3.4 UI Design<!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
@@ -224,7 +216,7 @@ Using the insights from previous research, I identified my target audience as yo
 	    		<h3>Responsive UI</h3>
 	    	</div>
 	    	<div class="case_description">
-				<img class="case1_img img_2_1" src="./assets/img/case1/3.4.1.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/3.4.1.png">
 	    	</div>
 		</div>
 		<div class="case_title_description_container more_margin_after">
@@ -232,13 +224,13 @@ Using the insights from previous research, I identified my target audience as yo
 	    		<h3>Other Desktop Pages</h3>
 	    	</div>
 	    	<div class="case_description">
-				<img class="case1_img img_2_1" src="./assets/img/case1/3.4.2.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/3.4.2.png">
 	    	</div>
 		</div>
 
 
 
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container zero_margin_bot">
 			<div class="case_title">
 	    		<h3><b>PROTOTYPE + TESTING</b><!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
@@ -247,13 +239,13 @@ Using the insights from previous research, I identified my target audience as yo
 	    	</div>
 		</div>
 
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container">
 			<div class="case_title">
 	    		<h3 class="case_subsection_title">4.1 UI Design<!--<div class="annoying_rectangle"></div>--></h3>
 	    	</div>
 	    	<div class="case_description">
 	    		<p>I created an affinity map to summarize the findings. This served as a guide to make a prioritized revision plan in order to further improve my design.</p>
-				<img class="case1_img img_2_1" src="./assets/img/case1/3.9Affinity Map-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/3.9Affinity Map-min.png">
 				<div class="case1_ul_container">
 					<div class="case1_ul_1">
 						<h3>Positive key findings:</h3>
@@ -273,12 +265,12 @@ Using the insights from previous research, I identified my target audience as yo
 				</div>
 	    	</div>
 		</div>
-		<div class="case_title_description_container less_margin_case_pair">
+		<div class="case_title_description_container">
 			<div class="case_title">
 	    		<h3>Revision 1</h3>
 	    	</div>
 	    	<div class="case_description">
-				<img class="case1_img img_2_1" src="./assets/img/case1/4.1Revision1-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/4.1Revision1-min.png">
 	    	</div>
 		</div>
 		<div class="case_title_description_container more_margin_after">
@@ -291,7 +283,7 @@ Using the insights from previous research, I identified my target audience as yo
 					2. Changed CTA button to disabled state before filling out the information to add constraint.<br>
 					3. Made icons smaller and changed their positions to right side as the original icons were a bit distracting.
 				</p>
-				<img class="case1_img img_2_1" src="./assets/img/case1/4.2Revision2-min.png">
+				<img class="case1_img click_to_overlay" src="./assets/img/case1/4.2Revision2-min.png">
 	    	</div>
 		</div>
 
@@ -303,7 +295,7 @@ Using the insights from previous research, I identified my target audience as yo
 	    	</div>
 	    	<div class="case_description">
 	    		<p>I organized all UI elements that were used in Mirror into a UI kit and prepared my handoff using Zepline.</p>
-	    		<img class="case1_img img_2_1" src="./assets/img/case1/4.3UI Kit-min.png">
+	    		<img class="case1_img click_to_overlay" src="./assets/img/case1/4.3UI Kit-min.png">
 	    	</div>
 		</div>
 

@@ -620,9 +620,9 @@ article {
 
 // ----- Case Section -----
 .case_container {
-  margin: 0 13%;
+  margin: 0 10%;
   > * {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
   }
 }
 
@@ -667,6 +667,13 @@ article {
     display: inline-block;
     margin-bottom: 40px;
   }
+  > .center_container {
+    width: 100%;
+    text-align: center;
+      > .proto_gif {
+      margin-bottom: 40px;
+    }
+  }
   margin-left: @case_margin;
 }
 
@@ -708,25 +715,28 @@ article {
     float:left;
     width: 50%;
     > ul {
-      padding-left: 12px;
+      padding-left: 13px;
     }
   }
   > .case1_ul_2 {
     margin-left: 50%;
     > ul {
-      padding-left: 12px;
+      padding-left: 13px;
     }
   }
 }
 
 .case1_img {
-  cursor: pointer;
   width: 100%;
   position: relative;
 }
 
+.click_to_overlay {
+  cursor: pointer;
+}
+
 .case_title_description_container.first_case_title_desc_pair  {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .case_title_description_container.more_margin_after {
@@ -737,20 +747,25 @@ article {
    margin-bottom: 40px !important;
 }
 
+.zero_margin_bot {
+  margin-bottom: 0px !important;
+}
+
 .case_reflection {
   > h3 {
     font-weight: bold;
     margin-bottom: 0;
-    margin-top: 30px;
+    margin-top: 40px;
   }
   > p {
     margin-bottom: 0;
   }
   > ul {
-    padding-left: 12px;
+    padding-left: 13px;
   }
 }
 
+/*
 .case1_header {
   margin-left: 100px;
   margin-right: 100px;
@@ -786,18 +801,52 @@ article {
     clear:both;
   }
 }
+*/
+.case1_header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  .case1_header_img_container {
+    display: inline-block;
+    margin-left: 10%;
+    width: calc(80% - 225px);
+  }
+  .case1_header_img {
+    width: 100%
+  }
+  .case1_header_box {
+    > h1 {
+      font-size: 40px;
+      margin-top: 0;
+    }
+    > p {
+      font-size: 16px;
+    }
+    position: absolute;
+    background-color: white;
+    box-shadow: 5px 5px 10px @shadow_color;
+    right:0;
+    margin-right: 10%;
+    padding: 25px;
+    width: 400px;
+    //height: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    > .header_box_last_p {
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 .overlay {
-  overflow-y: scroll;
-  max-height: 100%;
-  > #img_in_overlay {
-    overflow-x: scroll;
-    z-index: 11;
+  .overlay_img_container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+    height:100vh;
+    width: 100vw;
+    bottom:0;
+    overflow: scroll;
+    text-align: center
   }
   > #dismiss_button {
     position: fixed;
@@ -809,15 +858,17 @@ article {
     font-size: 50px;
     height:45px;
     width: 45px;
+    z-index:20;
     text-align: center;
     > p {
-      font-s
+      z-index:20;
       top:50%;
       transform: translateY(-50%);
     }
   }
   display: none;
   position: absolute;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 100%;
