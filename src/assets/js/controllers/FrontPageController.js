@@ -2,9 +2,10 @@ $(document).ready(function() {
 	//router.init();
 	router.goToMainPage();
 	headerController.setOnclickListeners();
+	setupPass();
+});
 
-	
-	/*
+var setupPass = function() {
 	$('main').hide();
 	$('header').hide();
 	$('footer').hide();
@@ -18,6 +19,5 @@ $(document).ready(function() {
 			$('.dont-delete-me').hide();
 		}
 	})
-	*/
-});
+}
 
