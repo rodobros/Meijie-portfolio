@@ -9,13 +9,14 @@ $(document).ready(() => {
 	var finalHtml = "";
 	for(var i = DailyUIController.numberOfImages ; i > 0 ; --i) {
 		if (DailyUIController.gifImages.includes(i)) {
-			finalHtml += "<img src=\"./assets/img/daily_ui/Day " + i + ".gif\">";	
+			finalHtml += "<img class=\"click_to_overlay\" src=\"./assets/img/daily_ui/Day " + i + ".gif\">";	
 		} else {
-			finalHtml += "<img src=\"./assets/img/daily_ui/Day " + i + ".png\">";
+			finalHtml += "<img class=\"click_to_overlay\" src=\"./assets/img/daily_ui/Day " + i + ".png\">";
 			if (DailyUIController.doubleImage.includes(i)) {
-				finalHtml += "<img src=\"./assets/img/daily_ui/Day " + i + "_2.png\">";
+				finalHtml += "<img class=\"click_to_overlay\" src=\"./assets/img/daily_ui/Day " + i + "_2.png\">";
 			}
 		}
 	}
 	$(".daily_ui_container").append(finalHtml);
+	ImageOverlayManager.setUpClickListeners();
 })

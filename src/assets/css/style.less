@@ -754,13 +754,15 @@ article {
 .case_reflection {
   > h3 {
     font-weight: bold;
-    margin-bottom: 0;
-    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-top: 60px;
   }
   > p {
+    margin-top: 0;
     margin-bottom: 0;
   }
   > ul {
+    margin-top: 0;
     padding-left: 13px;
   }
 }
@@ -875,6 +877,45 @@ article {
   height: 100%;
   z-index: 10;
   background-color: rgba(0,0,0,0.8); /*dim the background*/
+}
+
+.case_side_nav_container {
+  position: fixed;
+  height:100vh;
+  width: 100vw;
+  z-index: 16;
+  margin-top: -@header-height;
+}
+
+.dot_container {
+  position:relative;
+  top:50%;
+  transform: translateY(-50%);
+  margin-left: 25px;
+  > ul > li {
+    margin-bottom: 60px;
+  }
+ 
+ > .huge_dot {
+  > .dot_text {
+    bottom: 3px;
+    position: relative;
+    visibility: hidden;
+   font-size: 14px;
+   margin-left: -10px;
+   color: @text-color !important;
+  }
+  width: 100px;
+  font-size: 35px;
+  color: @case1_color;
+  &:hover {
+    color: @basic_yellow;
+  }
+ }
+
+ > .huge_dot.yellow_text {
+    color: @basic_yellow;
+  }
 }
 
 // ----- Case 1 Section -----

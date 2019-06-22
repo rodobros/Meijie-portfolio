@@ -5,11 +5,7 @@ ImageOverlayManager.setUpClickListeners = function() {
 		ImageOverlayManager.showImageInOverlay($(event.target).attr("src"));
 	})
 
-	$("#dismiss_button").click(() => {
-		ImageOverlayManager.dismissOverlay();
-	})
-
-	$("overlay").click(() => {
+	$(".overlay").click(() => {
 		ImageOverlayManager.dismissOverlay();
 	})
 
