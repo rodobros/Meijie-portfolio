@@ -75,7 +75,7 @@ headerController.setOnclickListeners = function() {
 		headerController.setWorkPageSelected();
 		router.goToMainPage(function() {
 			$([document.documentElement, document.body]).animate({
-        		scrollTop: $("#case_studies").offset().top
+        		scrollTop: $("#case_studies").offset().top - 30
     		}, 2);
     		headerController.removeHam(true);
 		});
@@ -84,7 +84,7 @@ headerController.setOnclickListeners = function() {
 		headerController.setWorkPageSelected();
 		router.goToMainPage(function() {
 			$([document.documentElement, document.body]).animate({
-        		scrollTop: $("#case_studies").offset().top
+        		scrollTop: $("#case_studies").offset().top - 30
     		}, 2);
     		headerController.removeHam(true);
 		});

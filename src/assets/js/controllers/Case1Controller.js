@@ -1,11 +1,30 @@
+let sectionsId = ["section1",
+				"section2",
+				"section3",
+				"section4",
+				"section5",]
+
 $(document).ready(function() {
 	headerController.setCaseSelected();
 	ImageOverlayManager.setUpClickListeners();
 
-	 lastScrollPos = $(window).scrollTop();
+	lastScrollPos = $(window).scrollTop();
 
 	// set up scroller
 	$(window).scroll(function() {
+		clearTimeout($.data(this, 'scrollTimer'));
+		$.data(this, 'scrollTimer', setTimeout(function() {
+			var currentPos = $(window).scrollTop() + $(window).height();
+			//alert("fuck");
+			for (var i = 4 ; i >= 0 ; --i) {
+				if (currentPos > $("#" + sectionsId[i]).offset().top) {
+					makeSectionVisible(i + 1);
+					return;
+				}
+			}
+			makeSectionVisible(1);
+		}, 250));
+		
 		for (var i = 1 ; i < 6 ; ++i) {
 			if(isVisible(i)) {
 				// scrolling down
@@ -18,6 +37,7 @@ $(document).ready(function() {
 		}
 		lastScrollPos = $(window).scrollTop();
 		makeSectionVisible(currentlyVisible);
+		
 	});
 
 	$("#huge_dot1").hover(() => {
@@ -50,10 +70,18 @@ $(document).ready(function() {
 			$("#case_side_nav_dot5").css("visibility", "hidden");
 		});
 
-	$("#huge_dot").click((event) => {
+	$(".huge_dot").click((event) => {
 		// slice the number
-		$(event.target).attr("src")
+		var idOfElement = $(event.target).attr('id');
+		idOfElement[idOfElement.length - 1]
+		$([document.documentElement, document.body]).animate({
+        	scrollTop: $("#" + sectionsId[idOfElement[idOfElement.length - 1] - 1]).offset().top - 50
+    	}, 100);
 	})
+
+	$([document.documentElement, document.body]).animate({
+       	scrollTop: $(".header-container").offset().top
+    }, 2);
 })
 
 var makeSectionVisible = function(sectionNumber) {

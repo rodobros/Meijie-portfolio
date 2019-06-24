@@ -500,19 +500,19 @@ article {
 }
 
 .yellow_case_box {
-  background-color: rgba(237, 233, 202, 0.95);
+  background-color: rgba(234, 230, 199, 0.95);
 }
 
 .pink_case_box {
-  background-color: rgba(237, 202, 202, 0.95);
+  background-color: rgba(237, 203, 202, 0.95);
 }
 
 .blue_case_box {
-  background-color: rgba(202, 223, 237, 0.95);
+  background-color: rgba(202, 221, 237, 0.95);
 }
 
-.blue_green_case_box {
-  background-color: rgba(202, 234, 237, 0.95);
+.green_case_box {
+  background-color: rgba(217, 237, 202, 0.95);
 }
 
 // ----- about page ---------
@@ -805,6 +805,7 @@ article {
 }
 */
 .case1_header {
+  z-index: -1;
   position: relative;
   width: 100%;
   margin-bottom: 80px;
@@ -883,17 +884,17 @@ article {
   position: fixed;
   height:100vh;
   width: 100vw;
-  z-index: 16;
   margin-top: -@header-height;
 }
 
 .dot_container {
+  display: inline-block;
   position:relative;
   top:50%;
   transform: translateY(-50%);
-  margin-left: 25px;
+  margin-left: 15px;
   > ul > li {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
  
  > .huge_dot {
