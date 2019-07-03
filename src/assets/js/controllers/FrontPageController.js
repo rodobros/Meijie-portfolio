@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//router.init();
 	router.goToMainPage();
 	headerController.setOnclickListeners();
-	setupPass();
+	//setupPass();
 });
 
 var setupPass = function() {

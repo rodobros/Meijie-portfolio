@@ -1,10 +1,10 @@
-var case1Controller = {};
+var case2Controller = {};
 
 $(document).ready(function() {
-	case1Controller.init();
+	case2Controller.init();	
 })
 
-case1Controller.init = function() {
+case2Controller.init = function() {
 	headerController.setCaseSelected();
 	ImageOverlayManager.setUpClickListeners();
 	caseSideNavManager.init(
@@ -15,8 +15,9 @@ case1Controller.init = function() {
 		"section5",]);	
 
 	$("#test_prototype_button").click(() => {
-		window.open("https://invis.io/43SR9TVVMK7");
+		window.open("https://invis.io/YJSSVDAB762");
 	})
 }
 
-//case1Controller.init();
+//case2Controller.init();
+

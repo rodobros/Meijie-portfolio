@@ -55,3 +55,7 @@ router.goToDailyUIPage = function () {
 router.goToCase1Page = function() {
 	$("main").load("./case1.html");
 }
+
+router.goToCase2Page = function() {
+	$("main").load("./case2.html");
+}
