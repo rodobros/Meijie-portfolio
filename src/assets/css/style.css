@@ -580,7 +580,7 @@ article {
   padding-left: 13px;
 }
 .case_ul_container > .case_ul_2 {
-  margin-left: 50%;
+  margin-left: 55%;
 }
 .case_ul_container > .case_ul_2 > ul {
   padding-left: 13px;
@@ -600,7 +600,7 @@ article {
   margin-top: 10px;
 }
 .case_ol_container > .case_ol_2 {
-  margin-left: 50%;
+  margin-left: 55%;
 }
 .case_ol_container > .case_ol_2 > ol {
   padding-left: 13px;
@@ -712,6 +712,9 @@ article {
   z-index: 20;
   top: 50%;
   transform: translateY(-50%);
+}
+#img_in_overlay {
+  max-width: 100%;
 }
 .case_side_nav_container {
   position: fixed;
