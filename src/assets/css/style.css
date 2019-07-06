@@ -172,11 +172,24 @@ header > .header-container {
 }
 header .logo {
   display: inline-block;
+  position: relative;
+  z-index: 10;
   height: 50px;
   margin: 20px 0px 10px 60px;
 }
 header .logo img {
   height: 35px;
+}
+@media screen and (max-width: 900px) {
+  header .logo {
+    margin: 20px 0px 10px 5% !important;
+  }
+  .ham_container {
+    margin: 20px 5% !important;
+  }
+  #introduction {
+    margin: 0 5% !important;
+  }
 }
 header nav {
   display: inline-block;
@@ -642,6 +655,9 @@ article {
   margin-top: 0;
   padding-left: 13px;
 }
+.case_reflection > .thanks_text {
+  margin: 60px 0;
+}
 .case_header {
   z-index: -1;
   position: relative;
@@ -757,6 +773,55 @@ article {
 }
 #test_prototype_button:hover {
   background-color: #ffdc0b;
+}
+@media screen and (max-width: 900px) {
+  .case_side_nav_container {
+    display: none;
+  }
+  .case_container {
+    margin: 0 5%;
+  }
+  .case_header .case_header_img_container {
+    margin-left: 0;
+    width: 100%;
+  }
+  .case_header .case_header_img {
+    width: 100%;
+  }
+  .case_header .case_header_box {
+    position: relative !important;
+    box-shadow: none;
+    right: auto;
+    margin: 0 5%;
+    margin-top: 80px;
+    padding: 0;
+    width: auto;
+    top: auto;
+    transform: none;
+  }
+  .case_title {
+    float: none;
+    width: 100%;
+  }
+  .case_description {
+    margin-left: 0px;
+  }
+  .case_description > .center_container > img {
+    width: 80%;
+  }
+}
+.other_cases_link_container {
+  display: flex;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 900px) {
+  .other_cases_link_container {
+    flex-wrap: wrap;
+  }
+}
+.other_case_link {
+  margin-right: 40px;
+  margin-bottom: 40px;
 }
 .background_color_case1 {
   background-color: #e9e7cb;

@@ -37,6 +37,8 @@
 
 @case_margin: 300px;
 
+@responsive_margin: 5%;
+
 //fonts
 @font-face {
   font-family: 'Lato-Heavy';
@@ -245,10 +247,26 @@ header {
 
 header .logo {
   display: inline-block;
+  position: relative;
+  z-index: 10;
   height: @header-height - @header-top-margin - @header-bot-margin;
   margin: @header-top-margin 0px @header-bot-margin @text-left-right-padding;
 
   img { height: 35px; }
+}
+
+@media screen and (max-width: 900px) {
+  header .logo {
+    margin: @header-top-margin 0px @header-bot-margin @responsive_margin !important;
+  }
+
+  .ham_container {
+    margin: @header-top-margin @responsive_margin !important;
+  }
+
+  #introduction {
+    margin: 0 @responsive_margin !important;
+  }
 }
 
 header nav {
@@ -806,6 +824,10 @@ article {
     margin-top: 0;
     padding-left: 13px;
   }
+
+  > .thanks_text {
+    margin: 60px 0;
+  }
 }
 
 .case_header {
@@ -931,6 +953,67 @@ article {
   &:hover {
     background-color: @basic_yellow;
   }
+}
+
+@media screen and (max-width: 900px) {
+  .case_side_nav_container {
+    display: none;
+  }
+
+  .case_container {
+    margin: 0 @responsive_margin;
+  }
+
+  .case_header {
+    .case_header_img_container {
+      margin-left: 0;
+      width: 100%;
+    }
+    .case_header_img {
+      width: 100%
+    }
+    .case_header_box {
+      position: relative !important;
+      box-shadow: none;
+      right: auto;
+      margin: 0 @responsive_margin;
+      margin-top: 80px;
+      padding: 0;
+      width: auto;
+      top: auto;
+      transform: none;
+    }
+  }
+
+  .case_title {
+    float: none;
+    width: 100%;
+  }
+
+  .case_description {
+    margin-left: 0px;
+    > .center_container {
+      > img {
+        width: 80%;
+      }
+    }
+  }
+}
+
+.other_cases_link_container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+  .other_cases_link_container {
+    flex-wrap: wrap;
+  }
+}
+
+.other_case_link {
+  margin-right: 40px;
+  margin-bottom: 40px;
 }
 
 // ----- Case 1 Section -----
