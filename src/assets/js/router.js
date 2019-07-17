@@ -59,3 +59,7 @@ router.goToCase1Page = function() {
 router.goToCase2Page = function() {
 	$("main").load("./case2.html");
 }
+
+router.goToCase3Page = function() {
+	$("main").load("./case3.html");
+}

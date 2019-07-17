@@ -16,4 +16,8 @@ $(document).ready(function() {
 	$("#case_2").click(() => {
 		router.goToCase2Page();
 	})
+
+	$("#case_3").click(() => {
+		router.goToCase3Page();
+	})
 });

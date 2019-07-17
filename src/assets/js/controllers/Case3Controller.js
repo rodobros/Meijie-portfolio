@@ -1,10 +1,10 @@
-var case2Controller = {};
+var case3Controller = {};
 
 $(document).ready(function() {
-	case2Controller.init();	
+	case3Controller.init();	
 })
 
-case2Controller.init = function() {
+case3Controller.init = function() {
 	headerController.setCaseSelected();
 	ImageOverlayManager.setUpClickListeners();
 	caseSideNavManager.init(
@@ -15,15 +15,18 @@ case2Controller.init = function() {
 		"section5",]);	
 
 	$("#test_prototype_button").click(() => {
-		window.open("https://invis.io/YJSSVDAB762");
+		//scroll to bottom
+		$([document.documentElement, document.body]).animate({
+        	scrollTop: $("#embeded_proto").offset().top
+    	}, 100);
 	})
 
 	$("#other_case1_link").click(() => {
 		router.goToCase1Page();
 	})
 
-	$("#other_case3_link").click(() => {
-		router.goToCase3Page();
+	$("#other_case2_link").click(() => {
+		router.goToCase2Page();
 	})
 
 	$("#other_case4_link").click(() => {

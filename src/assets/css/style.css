@@ -841,6 +841,15 @@ article {
 .case2_color {
   color: #d9edca;
 }
+.background_color_case3 {
+  background-color: #cadded;
+}
+.case3_border_bottom_color {
+  border-bottom: 5px solid #cadded;
+}
+.case3_color {
+  color: #cadded;
+}
 footer {
   height: 300px;
   position: absolute;
