@@ -35,6 +35,7 @@
 @case1_color: #e9e7cb;
 @case2_color: #d9edca;
 @case3_color: #cadded;
+@case4_color: #cdcff7;
 
 @case_margin: 300px;
 
@@ -226,6 +227,9 @@ button {
 
 // ----- Header Section -----
 header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
   height: @header-height;
   background-color: rgba(0, 0, 0, 0.0);
   font-size: 16px;
@@ -238,6 +242,7 @@ header {
 }
 
 .header_link {
+  cursor: pointer;
   &:hover { border-bottom: 3px solid @basic_yellow; }
 }
 
@@ -302,7 +307,7 @@ header nav {
 .active_circle {
   position: absolute;
   z-index: -1;
-  top : 25px;
+  top : 10px;
   left: -5px;
   width:18px;
   height:18px;
@@ -367,8 +372,9 @@ main {
   display: flex;
   width: 100%;
   padding: 0 @page-left-right-padding @sections-margin @page-left-right-padding;
-  margin: 0 0 @footer-height 0;
+  margin: 0 auto @footer-height auto;
   flex-wrap: wrap;
+  max-width: 1400px;
 }
 
 #intro_text_container {
@@ -496,34 +502,28 @@ article {
   }
 }
 
-#case_3 {
+#case_4 {
   margin-bottom: 1%;
   margin-left: 1%;
+  margin-right: 1%;
+}
+
+#case_3 {
+  margin-bottom: 1%;
   margin-right: 1%;
 }
 
 #case_2 {
-  margin-bottom: 1%;
-  margin-right: 1%;
-}
-
-#case_1 {
   margin-left: 1%;
   margin-right: 1%;
 }
 
-#case_4 {
+#case_1 {
   margin-right: 1%;
 }
 
 @media screen and (max-width: 900px) {
-  #case_1 {
-    margin-bottom: 1%;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-
-  #case_2 {
+  #case_4 {
     margin-bottom: 1%;
     margin-left: 1%;
     margin-right: 1%;
@@ -535,7 +535,13 @@ article {
     margin-right: 1%;
   }
 
-  #case_4 {
+  #case_2 {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  #case_1 {
     margin-left: 1%;
     margin-right: 1%;
   }
@@ -570,8 +576,8 @@ article {
   background-color: rgba(234, 230, 199, 0.95);
 }
 
-.pink_case_box {
-  background-color: rgba(237, 203, 202, 0.95);
+.purple_case_box {
+  background-color: rgba(205, 207, 247, 0.95);
 }
 
 .blue_case_box {
@@ -584,48 +590,34 @@ article {
 
 // ----- about page ---------
 
-.about_page {
-   text-align: center;
-}
-
 .about_img_container {
-  margin-right: 5%;
+  float:left;
+  width: 500px;
+  margin-right: 50px;
 }
 
-.about_img_small {
-  display: none;
-  width: 100%;
-  height:auto;
-}
-
-.about_img_big {
-  width:100%;
-  display: inline-block;
-  margin-right: 5%;
-  height:auto;
-}
-
-.about_text_container {
-  text-align: left;
-  margin: -5% 25% 0 25%;
+.about_img {
+  width: 500px;
 }
 
 @media screen and (max-width: 900px) {
-  .about_text_container {
-    margin: 0 5% 0 5%;
+  .about_img {
+    width: 100%;
   }
 
   .about_img_container {
-    margin: 0;
+    float: none;
+    width: 100%;
+    margin-right: 0;
   }
 
-  .about_img_small {
-    display: block;
+  .about_page {
+    margin: 0 5% !important;
   }
+}
 
-  .about_img_big {
-    display: none;
-  }
+.about_page {
+  margin: 100px 10% 0 10%;
 }
 
 // ----- Daily UI page ------ //
@@ -716,11 +708,6 @@ article {
   }
 }
 
-.no_margin {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .case_description {
   > p {
     display: inline-block;
@@ -734,6 +721,11 @@ article {
     }
   }
   margin-left: @case_margin;
+}
+
+.no_margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .clear {
@@ -878,24 +870,6 @@ article {
     overflow: scroll;
     text-align: center
   }
-  > #dismiss_button {
-    position: fixed;
-    top: 70px;
-    right: 70px;
-    margin: 0;
-    color: white;
-    cursor: pointer;
-    font-size: 50px;
-    height:45px;
-    width: 45px;
-    z-index:20;
-    text-align: center;
-    > p {
-      z-index:20;
-      top:50%;
-      transform: translateY(-50%);
-    }
-  }
   display: none;
   position: absolute;
   overflow-y: scroll;
@@ -907,8 +881,15 @@ article {
   background-color: rgba(0,0,0,0.8); /*dim the background*/
 }
 
-#img_in_overlay {
+.img_in_overlay_w {
   max-width: 100%;
+}
+
+.img_in_overlay_h {
+  max-height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .case_side_nav_container {
@@ -945,6 +926,14 @@ article {
 
  > .huge_dot.yellow_text {
     color: @basic_yellow;
+  }
+}
+
+.test_prototype_button {
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    background-color: @basic_yellow;
   }
 }
 
@@ -1043,7 +1032,7 @@ article {
   color: @case2_color;
 }
 
-// ----- Case 2 Section -----
+// ----- Case 3 Section -----
 .background_color_case3 {
   background-color: @case3_color;
 }
@@ -1054,6 +1043,44 @@ article {
 
 .case3_color {
   color: @case3_color;
+}
+
+.case3_gif {
+  max-width:280px;
+  height:auto;
+}
+
+
+// ----- Case 4 Section -----
+.background_color_case4 {
+  background-color: @case4_color;
+}
+
+.case4_border_bottom_color {
+  border-bottom: 5px solid @case4_color;
+}
+
+.case4_color {
+  color: @case4_color;
+}
+
+.case4_gif {
+  max-width:280px;
+  height:auto;
+}
+
+.proto_iframe {
+  transform-origin: left top;
+}
+
+.proto_instructions_container > ul > li {
+  margin: 10px 0;
+}
+
+.proto_instructions_container {
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
 }
 
 // ----- Footer Section -----

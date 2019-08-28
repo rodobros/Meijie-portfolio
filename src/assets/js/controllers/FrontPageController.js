@@ -1,8 +1,12 @@
 $(document).ready(function() {
-	//router.init();
-	router.goToMainPage();
+	router.init();
+	if (router.shouldUseRoutes) {
+		router.resolveRoute(window.location.pathname.slice(1) || "/");
+	} else {
+		router.goToMainPage();
+	}
 	headerController.setOnclickListeners();
-	setupPass();
+	//setupPass();
 });
 
 var setupPass = function() {

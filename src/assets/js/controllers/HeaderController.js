@@ -42,8 +42,8 @@ headerController.setOnclickListeners = function() {
 		router.goToPhotoPage();
 	})
 	$("#" + headerController.headerLinksIds[3]).click(() => {
-		headerController.setPhotoPageSelected();
-		router.goToResumePage();
+		//headerController.setPhotoPageSelected();
+		//router.goToResumePage();
 	})
 	$("#" + headerController.headerLinksIds[4]).click(() => {
 		headerController.setDailyUISelected();
@@ -63,8 +63,7 @@ headerController.setOnclickListeners = function() {
 		router.goToPhotoPage();
 	})
 	$("#" + headerController.headerLinksIds[8]).click(() => {
-		headerController.setPhotoPageSelected();
-		router.goToResumePage();
+		//router.goToResumePage();
 	})
 	$("#" + headerController.headerLinksIds[9]).click(() => {
 		headerController.setDailyUISelected();

@@ -20,4 +20,8 @@ $(document).ready(function() {
 	$("#case_3").click(() => {
 		router.goToCase3Page();
 	})
+
+	$("#case_4").click(() => {
+		router.goToCase4Page();
+	})
 });

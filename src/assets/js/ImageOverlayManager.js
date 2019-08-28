@@ -19,6 +19,18 @@ ImageOverlayManager.showImageInOverlay = function(imgSrc) {
 	$("#img_in_overlay").attr("src", imgSrc);
 	ImageOverlayManager.lockScrolling(true);
 	$(".overlay").show();
+	if (ImageOverlayManager.makeImageNotScrollable) {
+		if($("#img_in_overlay").height() < $("#img_in_overlay").width()) {
+			$("#img_in_overlay").removeClass("img_in_overlay_w");
+			$("#img_in_overlay").addClass("img_in_overlay_h");
+		} else {
+			$("#img_in_overlay").addClass("img_in_overlay_w");
+			$("#img_in_overlay").removeClass("img_in_overlay_h");
+		}
+	} else {
+		$("#img_in_overlay").addClass("img_in_overlay_w");
+		$("#img_in_overlay").removeClass("img_in_overlay_h");
+	}
 }
 
 ImageOverlayManager.dismissOverlay = function() {
@@ -37,3 +49,5 @@ ImageOverlayManager.lockScrolling = function(shouldLock) {
 		});
 	}
 }
+
+ImageOverlayManager.makeImageNotScrollable = false;
