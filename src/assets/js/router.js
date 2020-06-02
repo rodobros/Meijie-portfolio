@@ -4,6 +4,7 @@ router.init = function() {
 	if (router.shouldUseRoutes) {
 		window.addEventListener('load', router.routeHandler);
 		window.addEventListener('hashchange', router.routeHandler);
+		window.addEventListener('popstate', router.routeHandler);
 		$.get( "./index.html", function(data) {
 			router.index = data;
 		});
@@ -15,7 +16,8 @@ router.index = ""
 router.shouldUseRoutes = true;
 
 router.resolveRoute = function(url) {
-	switch(url) {
+	var urlToLow = url.toLowerCase();
+	switch(urlToLow) {
 		case "":
 		case "/":
 		case "main":
@@ -27,19 +29,19 @@ router.resolveRoute = function(url) {
 		case "photo":
 			router.goToPhotoPage();
 			break;
-		case "case1":
+		case "mirror":
 			router.goToCase1Page();
 		break;
-		case "case2":
+		case "lamaisondesoya":
 			router.goToCase2Page();
 		break;
-		case "case3":
+		case "bmo":
 			router.goToCase3Page();
 		break;
-		case "case4":
+		case "trueskin":
 			router.goToCase4Page();
 		break;
-		case "daily":
+		case "dailyui":
 			router.goToDailyUIPage();
 		break;
 		default:
@@ -55,12 +57,14 @@ router.addHistory = function(route) {
 }
 
 router.routeHandler = (evt) => {
+	console.log("evt: " + evt);
     const route = window.location.pathname.slice(1) || "/";
+    console.log("route: " + route);
     router.resolveRoute(route.toLowerCase());
 };
 
 router.goToMainPage = function(cb) {
-	router.addHistory("main");
+	router.addHistory("/");
 	$("main").load("./main_page.html", cb);
 }
 
@@ -79,26 +83,26 @@ router.goToResumePage = function() {
 }
 
 router.goToDailyUIPage = function () {
-	router.addHistory("daily");
+	router.addHistory("dailyui");
 	$("main").load("./dailyui.html");
 }
 
 router.goToCase1Page = function() {
-	router.addHistory("case1");
+	router.addHistory("mirror");
 	$("main").load("./case1.html");
 }
 
 router.goToCase2Page = function() {
-	router.addHistory("case2");
+	router.addHistory("lamaisondesoya");
 	$("main").load("./case2.html");
 }
 
 router.goToCase3Page = function() {
-	router.addHistory("case3");
+	router.addHistory("bmo");
 	$("main").load("./case3.html");
 }
 
 router.goToCase4Page = function() {
-	router.addHistory("case4");
+	router.addHistory("trueskin");
 	$("main").load("./case4.html");
 }

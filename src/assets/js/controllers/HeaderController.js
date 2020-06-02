@@ -154,4 +154,28 @@ $(document).ready(function() {
 		headerController.setWorkPageSelected();
 		router.goToMainPage();
 	})
+	window.addEventListener('load', headerController.selectHeaderLinkFromEvent);
+	window.addEventListener('hashchange', headerController.selectHeaderLinkFromEvent);
+	window.addEventListener('popstate', headerController.selectHeaderLinkFromEvent);
 })
+
+headerController.selectHeaderLinkFromEvent = function(evt) {
+	const route = window.location.pathname.slice(1) || "/";
+	headerController.removeSelectedHeaderLink();
+	switch(route) {
+		case "about":
+			headerController.selectHeaderLink(headerController.headerLinksIds[1]);
+			break;
+		case "photo":
+			headerController.selectHeaderLink(headerController.headerLinksIds[2]);
+			break;
+		case "mirror":
+		case "lamaisondesoya":
+		case "bmo":
+		case "trueskin":
+			headerController.selectHeaderLink(headerController.headerLinksIds[10]);
+		break;
+		default:
+			break;
+	}
+}

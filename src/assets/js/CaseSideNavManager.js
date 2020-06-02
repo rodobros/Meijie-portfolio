@@ -11,6 +11,9 @@ caseSideNavManager.init = function(sectionsId) {
 		$.data(this, 'scrollTimer', setTimeout(function() {
 			var currentPos = $(window).scrollTop() + $(window).height();
 			for (var i = caseSideNavManager.sectionsId.length - 1 ; i >= 0 ; --i) {
+				if (!$("#" + caseSideNavManager.sectionsId[i]).length) {
+					continue;
+				}
 				if (currentPos > $("#" + caseSideNavManager.sectionsId[i]).offset().top) {
 					caseSideNavManager.makeSectionVisible(i + 1);
 					return;
@@ -72,6 +75,9 @@ caseSideNavManager.makeSectionVisible = function(sectionNumber) {
 }
 
 caseSideNavManager.isVisible = function(sectionNumber) {
+	if (!$("#section" + sectionNumber).length) {
+		return false;
+	}
 	return ($(window).scrollTop() < $("#section" + sectionNumber).offset().top)
 		&& (($(window).scrollTop() + $(window).height()) > $("#section" + sectionNumber).offset().top)
 }
