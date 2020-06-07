@@ -12,8 +12,7 @@ case2Controller.init = function() {
 		["section1",
 		"section2",
 		"section3",
-		"section4",
-		"section5",]);	
+		"section4",]);	
 
 	$("#test_prototype_button").click(() => {
 		window.open("https://invis.io/YJSSVDAB762");

@@ -11,9 +11,7 @@ case1Controller.init = function() {
 	caseSideNavManager.init(
 		["section1",
 		"section2",
-		"section3",
-		"section4",
-		"section5",]);	
+		"section3",]);	
 
 	$("#test_prototype_button").click(() => {
 		window.open("https://invis.io/43SR9TVVMK7");

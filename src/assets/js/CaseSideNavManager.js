@@ -75,6 +75,7 @@ caseSideNavManager.makeSectionVisible = function(sectionNumber) {
 }
 
 caseSideNavManager.isVisible = function(sectionNumber) {
+	// TODO: there is a bug here, investigate
 	if (!$("#section" + sectionNumber).length) {
 		return false;
 	}
