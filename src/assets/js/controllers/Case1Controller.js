@@ -11,10 +11,14 @@ case1Controller.init = function() {
 	caseSideNavManager.init(
 		["section1",
 		"section2",
-		"section3",]);	
+		"section3",
+		"section4",]);	
 
 	$("#test_prototype_button").click(() => {
-		window.open("https://invis.io/43SR9TVVMK7");
+		//scroll to bottom
+		$([document.documentElement, document.body]).animate({
+        	scrollTop: $("#section3").offset().top
+    	}, 100);
 	})
 
 	$("#other_case2_link").click(() => {

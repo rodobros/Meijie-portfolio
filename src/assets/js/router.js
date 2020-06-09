@@ -13,7 +13,7 @@ router.init = function() {
 
 router.index = ""
 
-router.shouldUseRoutes = true;
+router.shouldUseRoutes = false;
 
 router.resolveRoute = function(url) {
 	var urlToLow = url.toLowerCase();
