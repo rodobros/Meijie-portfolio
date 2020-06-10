@@ -29,7 +29,7 @@ router.resolveRoute = function(url) {
 		case "photo":
 			router.loadPhotoPage();
 			break;
-		case "mirror":
+		case "earth":
 			router.loadCase1Page();
 			break;
 		case "lamaisondesoya":
@@ -41,12 +41,14 @@ router.resolveRoute = function(url) {
 		case "trueskin":
 			router.loadCase4Page();
 			break;
+		case "kiehls":
+			router.loadCase5Page();
+			break;
 		case "dailyui":
 			router.loadDailyUIPage();
 			break;
 		default:
-			window.location.replace("./404.html");
-
+			router.load404Page();
 	}
 }
 
@@ -103,8 +105,12 @@ router.loadDailyUIPage = function () {
 	$("main").load("./dailyui.html");
 }
 
+router.load404Page = function() {
+	$("main").load("./404.html");
+}
+
 router.goToCase1Page = function() {
-	router.addHistory("mirror");
+	router.addHistory("earth");
 	router.loadCase1Page();
 }
 
@@ -137,4 +143,13 @@ router.goToCase4Page = function() {
 
 router.loadCase4Page = function() {
 	$("main").load("./case4.html");
+}
+
+router.goToCase5Page = function() {
+	router.addHistory("kiehls");
+	router.loadCase5Page();
+}
+
+router.loadCase5Page = function() {
+	$("main").load("./case5.html");
 }

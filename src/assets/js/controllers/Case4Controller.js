@@ -26,23 +26,6 @@ case4Controller.init = function() {
 		window.open("https://invis.io/2MT6P7LU5Q6"); 
 	})
 
-	$("#other_case1_link").click(() => {
-		router.goToCase1Page();
-	})
-
-	$("#other_case2_link").click(() => {
-		router.goToCase2Page();
-	})
-
-	$("#other_case3_link").click(() => {
-		router.goToCase3Page();
-	})
-
-	$("#other_case_daily_link").click(() => {
-		headerController.setDailyUISelected();
-		router.goToDailyUIPage();
-	})
-
 	$(window).resize(function() {
 		case4Controller.resizeStupidIframe();
 	})

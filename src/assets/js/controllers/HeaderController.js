@@ -173,6 +173,7 @@ headerController.selectHeaderLinkFromEvent = function(evt) {
 		case "lamaisondesoya":
 		case "bmo":
 		case "trueskin":
+		case "kiehls":
 			headerController.selectHeaderLink(headerController.headerLinksIds[10]);
 		break;
 		default:

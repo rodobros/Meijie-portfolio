@@ -24,4 +24,8 @@ $(document).ready(function() {
 	$("#case_4").click(() => {
 		router.goToCase4Page();
 	})
+
+	$("#case_5").click(() => {
+		router.goToCase5Page();
+	})
 });

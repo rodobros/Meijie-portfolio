@@ -36,6 +36,7 @@
 @case2_color: #d9edca;
 @case3_color: #cadded;
 @case4_color: #cdcff7;
+@case5_color: #f3f4f2;
 
 @case_margin: 300px;
 
@@ -236,6 +237,21 @@ button {
   background-color: rgba(255,255,255, 1.0);
 }
 
+.expand_on_hover {
+  transition: transform .2s; /* Animation */
+  &:hover {
+    transform: scale(1.02) translateY(-3px);
+    box-shadow: 0px 2px 20px 3px @shadow_color;
+    z-index: 10;
+  }
+}
+
+.lighten_on_hover {
+  &:hover {
+    filter: opacity(30%);
+  }
+}
+
 // ----- Header Section -----
 header {
   margin-left: auto;
@@ -375,15 +391,6 @@ header nav {
 .ham_selected {
   > a {
     color: @basic_yellow;
-  }
-}
-
-.expand_on_hover {
-  transition: transform .2s; /* Animation */
-  &:hover {
-    transform: scale(1.02) translateY(-3px);
-    box-shadow: 0px 2px 20px 3px @shadow_color;
-    z-index: 10;
   }
 }
 
@@ -1090,6 +1097,19 @@ article {
   position: relative;
   top:50%;
   transform: translateY(-50%);
+}
+
+// ----- Case 5 Section -----
+.background_color_case5 {
+  background-color: @case5_color;
+}
+
+.case5_border_bottom_color {
+  border-bottom: 5px solid @case5_color;
+}
+
+.case5_color {
+  color: @case5_color;
 }
 
 // ----- Footer Section -----

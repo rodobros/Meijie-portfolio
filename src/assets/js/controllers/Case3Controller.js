@@ -22,23 +22,6 @@ case3Controller.init = function() {
     	}, 100);
 	})
 
-	$("#other_case1_link").click(() => {
-		router.goToCase1Page();
-	})
-
-	$("#other_case2_link").click(() => {
-		router.goToCase2Page();
-	})
-
-	$("#other_case4_link").click(() => {
-		router.goToCase4Page();
-	})
-
-	$("#other_case_daily_link").click(() => {
-		headerController.setDailyUISelected();
-		router.goToDailyUIPage();
-	})
-
 	$(window).resize(function() {
 		case3Controller.resizeStupidIframe();
 	})
