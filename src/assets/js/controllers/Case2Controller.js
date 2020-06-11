@@ -15,7 +15,10 @@ case2Controller.init = function() {
 		"section4",]);	
 
 	$("#test_prototype_button").click(() => {
-		window.open("https://invis.io/YJSSVDAB762");
+		//scroll to bottom
+		$([document.documentElement, document.body]).animate({
+        	scrollTop: $("#hi_fidelity_anchor").offset().top
+    	}, 100);
 	})
 }
 
