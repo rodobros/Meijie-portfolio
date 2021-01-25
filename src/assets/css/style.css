@@ -539,11 +539,10 @@ article {
 .photo_page_container {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
 }
 .photo_column {
-  flex: 49%;
-  max-width: 49%;
+  flex: 19%;
+  max-width: 19%;
   padding: 0 4px;
 }
 .photo_column > img {
@@ -551,11 +550,29 @@ article {
   vertical-align: middle;
   width: 100%;
 }
+.photo_column.photo_left_column {
+  padding: 0 4px 0 0;
+}
+.photo_column.photo_right_column {
+  padding: 0 0 0 4px;
+}
+.photo_container {
+  margin: 0 10%;
+}
 @media screen and (max-width: 900px) {
-  .photo_column {
-    flex: 100%;
-    max-width: 100%;
+  .photo_container {
+    margin: 0;
   }
+  .photo_column {
+    flex: 31%;
+    max-width: 31%;
+  }
+}
+.photo_title {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 5px;
 }
 .case_container {
   margin: 0 10%;
