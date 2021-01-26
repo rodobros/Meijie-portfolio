@@ -1,35 +1,3 @@
-/*
-//fonts
-@font-face {
-  font-family: 'Lato-Heavy';
-  src:  url('Lato-Heavy.woff2') format('woff2'),
-        url('Lato-Heavy.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato-Light';
-  src:  url('Lato-Light.woff2') format('woff2'),
-        url('Lato-Light.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato-Bold';
-  src:  url('.fonts/Lato-Bold.woff2') format('woff2'),
-        url('.fonts/Lato-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato-Medium';
-  src:  url('.fonts/Lato-Medium.woff2') format('woff2'),
-        url('.fonts/Lato-Medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Lato-Regular';
-  src:  url('.fonts/Lato-Regular.woff2') format('woff2'),
-        url('.fonts/Lato-Regular.woff') format('woff');
-}
-*/
 html {
   background-color: rgba(0, 0, 0, 0);
   position: relative;
@@ -924,6 +892,21 @@ article {
 }
 .case5_color {
   color: #f3f4f2;
+}
+.background_color_case6 {
+  background-color: #2D9CDB;
+}
+.case6_border_bottom_color {
+  border-bottom: 5px solid #2D9CDB;
+}
+.case6_color {
+  color: #2D9CDB;
+}
+.right_colored_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #2D9CDB;
 }
 footer {
   height: 300px;

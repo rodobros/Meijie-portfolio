@@ -47,6 +47,9 @@ router.resolveRoute = function(url) {
 		case "dailyui":
 			router.loadDailyUIPage();
 			break;
+		case "lowes":
+			router.loadCase6Page();
+			break;
 		default:
 			router.load404Page();
 	}
@@ -152,4 +155,13 @@ router.goToCase5Page = function() {
 
 router.loadCase5Page = function() {
 	$("main").load("./case5.html");
+}
+
+router.goToCase6Page = function() {
+	router.addHistory("lowes");
+	router.loadCase6Page();
+}
+
+router.loadCase6Page = function() {
+	$("main").load("./case6.html");
 }

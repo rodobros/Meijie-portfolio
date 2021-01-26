@@ -1,0 +1,330 @@
+<script type="text/javascript" src="./assets/js/CaseSideNavManager.js"></script>
+<script type="text/javascript" src="./assets/js/controllers/Case6Controller.js"></script>
+<div class="case_side_nav_container">
+	<ul class="dot_container">
+		<li class="huge_dot case6_color" id="huge_dot1">
+			<span class="dot_text" id="case_side_nav_dot1">Introduction</span>
+		</li>
+		<li class="huge_dot case6_color" id="huge_dot2">
+			<span class="dot_text" id="case_side_nav_dot2">Challenge 1</span>
+		</li>
+		<li class="huge_dot case6_color" id="huge_dot3">
+			<span class="dot_text" id="case_side_nav_dot3">Challenge 2</span>
+		</li>
+		<li class="huge_dot case6_color" id="huge_dot4">
+			<span class="dot_text" id="case_side_nav_dot4">Challenge 3</span>
+        </li>
+        <li class="huge_dot case6_color" id="huge_dot5">
+            <span class="dot_text" id="case_side_nav_dot5">Other Designs</span>
+        </li>
+		<li class="huge_dot case6_color" id="huge_dot6">
+			<span class="dot_text" id="case_side_nav_dot6">Web</span>
+        </li>
+        <li class="huge_dot case6_color" id="huge_dot7">
+            <span class="dot_text" id="case_side_nav_dot7">Prototype</span>
+        </li>
+        <li class="huge_dot case6_color" id="huge_dot8">
+            <span class="dot_text" id="case_side_nav_dot8">Reflection</span>
+        </li>
+	</ul>
+</div>
+<article id="case_container">
+	<div class="case_header">
+		<div class="case_header_img_container">
+			<img class="case_header_img" src="./assets/img/p6.png">
+		</div>
+		<div class="case_header_box">
+			<h1>Lowe’s Fidelity Program</h1>
+			<p>Lowe’s approached us to help them launching their Contractor rewards fidelity program (Now known as VIPpro). I redesigned and updated some parts of their customer app for iOS and Android, employee web and customer web. 
+                <br>Below case study mainly focuses on how I successfully solved key usability issues and integrated RONA and Réno-Dépot member cards seamlessly to the app.
+            </p>
+			<p>
+                <b>Roles:</b> Research, Information Architecture, UX/UI Design
+            </p>
+			<p class=>
+                <b>Tools:</b> Sketch, InVision, Zeplin, Keynote, Google Sheet, Jira
+            </p>
+            <p class="header_box_last_p">
+                <b>Duration::</b> Jan - Mar 2020
+            </p>
+		</div>
+	</div>
+	<div class="case_container">
+        <div class="case_title_description_container first_case_title_desc_pair">
+            <div class="case_title">
+                <h3 class="case_section_title">Process</h3>
+            </div>
+            <div class="case_description">
+                <img class="case_img" src="./assets/img/case6/1. Process-min.png">
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 id="section1" class="case_section_title">INTRODUCTION</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    Lowe’s is a big retail company specializing in home improvement. This program helps Lowe’s, RONA and Réno-Dépot’s customers to save money.
+                </p>
+            </div>
+        </div>
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 class="case_subsection_title case6_border_bottom_color">Research</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    After learning about Lowe’s business goals, and the feedback they got from users.  I also did a heuristic evaluation of the old product and discovered some usability issues. I then created our persona Mike.
+                </p>
+            </div>
+        </div>
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Persona</h3>
+            </div>
+            <div class="case_description">
+                <img class="case_img click_to_overlay" src="./assets/img/case6/2. Persona.png">
+            </div>
+        </div>
+        <div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Challenges</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    Now here comes the design challenges:
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/3. Challenges.png">
+            </div>
+        </div>
+		<div class="case_title_description_container more_margin_after">
+			<div class="case_title">
+				<h3 class="case_subsection_title case6_border_bottom_color">The Solution</h3>
+			</div>
+			<div class="case_description">
+				<p>
+                    I’ve used all the insights gained from Lowe’s customers to redesign and update the app. Inside the new version are: intuitive navigations, clear offer details, handy categorizations to help Mike manage purchases histories and save money during his next trip to Lowe’s, RONA or Réno-Dépot.
+                </p>
+				<div class="center_container">
+					<img class="proto_gif case_gif" src="./assets/img/case6/Lowe's.gif">
+					<br>
+					<button id="test_prototype_button" class="background_color_case6 expand_on_hover test_prototype_button">TEST PROTOTYPE</button>
+				</div>
+			</div>
+        </div>
+        
+
+        <div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 id="section2" class="case_section_title no_margin">CHALLENGE 1</h3>
+            </div>
+            <div class="case_description">
+                <h2 class="right_colored_title">How might we integrate RONA and Réno-Dépot seamlessly?</h2>
+                <p>
+                    Before I walk you through Mike’s jorney using VIPpro, comparing the old version to the new version.  I’d like to give you a high level overview of what Mike can do on VIPpro.  
+                    I created this sitemap to show the information architecture of the current app, everything in blue are the new features. We will look at the features more in details when I talk about the other challenges. Below are four main things Mike can do:
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/4. High-level description.png">
+                <img class="case_img click_to_overlay" src="./assets/img/case6/5. Sitemap.png">
+            </div>
+        </div>
+
+
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 id="section3" class="case_section_title no_margin">CHALLENGE 2</h3>
+            </div>
+            <div class="case_description">
+                <h2 class="right_colored_title">Before vs After: How might we communicate the app offering clearly?</h2>
+            </div>
+        </div>
+        <div class="case_title_description_container">
+            <div class="case_title">
+                <h3 class="case_subsection_title case6_border_bottom_color">Member Cards</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    From research, we learned that Mike is a lead construction worker for ABC Inc. Let’s imagine Mike just applied for VIPpro fidelity program and wants to check his member benefits. When he opens the app, he runs into some problems:
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/6. Before_ Member cards.png">
+                <img class="case_img click_to_overlay" src="./assets/img/case6/6. After_ Member cards.png">
+            </div>
+        </div>
+        <div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 class="case_subsection_title case6_border_bottom_color">Saved Offers</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    After learning about the member cards benefits, Mike has been saving offers that he found interesting. Mike is in one of RONA’s store and needed to find this sink offer he saved, he faces some problems with the old screen:
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/7. Before_ Saved Offers.png">
+                <img class="case_img click_to_overlay" src="./assets/img/case6/7. After_ Saved Offers.png">
+            </div>
+        </div>
+
+
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 id="section4" class="case_section_title no_margin">CHALLENGE 3</h3>
+            </div>
+            <div class="case_description">
+                <h2 class="right_colored_title">Before vs After: How might we help Mike to manage purchase histories?</h2>
+            </div>
+        </div>
+        <div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 class="case_subsection_title case6_border_bottom_color">Purchase History Flow</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    It’s the time that Mike needs to track his personal and business spending. With the old app, Mike basically cannot find any useful information because of the unintuitive flow without any filters.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/8. Before_ Purchase History.png">
+                <p>
+                    Due to constraints, we couldn’t add filters. In order to make sure Mike can manage purchase histories easily, we did a lot of brainstorming sessions trying to figure out the flow. Should personal and business purchase histories be separated or consolidated in one place? How should we do it without filters? How should we present information? Finally, with whiteboard sessions and many iterations, we decided to centralize business and personal spending in one place so that Mike doesn’t need to go back and forth when viewing purchase histories.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/8. Userflow.png">
+                <img class="case_img click_to_overlay" src="./assets/img/case6/8. After_ Purchase History.png">
+            </div>
+        </div>
+
+
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 id="section5" class="case_section_title">OTHER DESIGNS</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    Below are some other screens:
+                </p>
+            </div>
+        </div>
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Onboarding</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    Onboarding - Members are presented with a welcome screen and a tour of key features. They can swipe through each value propositions. Onboarding helps users to understand the app offering.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/9.1 Hi-fi_Onboarding.png">
+            </div>
+        </div>
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Offer, Store & Réno-Dépot  </h3>
+            </div>
+            <div class="case_description">
+                <p>
+                        Offers - With a segmented control on top, members can minimize scroll efforts when viewing promotional offers. 
+                        <br>Store - Members can locate nearest stores and save their favorite stores.
+                        <br>Réno-Dépot - Members can scan barcode at checkout to have discount, view detailed information about the card all on the same screen.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/9.2 Offer,store.png">
+            </div>
+        </div>
+        <div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Link RONA Account</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    Link RONA account - Members can follow the step-by-step instructions of how to link RONA contractors account.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/9.3 Hi-fi_Link RONA Account.png">
+            </div>
+        </div>
+
+
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 id="section6" class="case_section_title">WEB</h3>
+            </div>
+            <div class="case_description">
+                <p></p>
+            </div>
+        </div>
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Employee Web</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    To link a RONA charge account, Mike needs to call RONA. 
+                    <br>I also helped Lowe’s to update their employee web including (Advanced filters, new purchase history flow, linking RONA cards etc.) Due to NDA, I’m not allowed to show the details. But from below screen, we can see what actions employees can do for each customer.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/10. Employee web.png">
+            </div>
+        </div>
+        <div class="case_title_description_container zero_margin_bot">
+            <div class="case_title">
+                <h3 class="case_subsection_title">Customer Web</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    Mike can also manage his purchase histories on the web. Similar to the app, we categorized purchases by brands.
+                    <br>Below screens shows how Mike can view RONA charge accounts purchase histories. He can either view all purchases at once, view by projects, or view by buyers.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/11. Customer web.png">
+            </div>
+        </div>
+        <div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 class="case_subsection_title">UI Kit</h3>
+            </div>
+            <div class="case_description">
+                <p>
+                    While I was designing, I also updated the design library.
+                </p>
+                <img class="case_img click_to_overlay" src="./assets/img/case6/12.UI Kit.png">
+            </div>
+        </div>
+
+
+		<div class="case_title_description_container more_margin_after">
+            <div class="case_title">
+                <h3 id="section7" class="case_section_title">PROTOTYPE</h3>
+            </div>
+            <div class="case_description">
+                <div class="case_ul_container">
+                    <div class="case_ul_1">
+                        <iframe width="442px" height="935px" class="proto_iframe" frameborder="0" src="https:////invis.io/JYT8D5OAQ9K" allowfullscreen></iframe>
+                    </div>
+                    <div class="case_ul_2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+		<div class="case_title_description_container">
+            <div class="case_title">
+                <h3 class="case_subsection_title" id="section8">
+                    <b>REFLECTION</b>
+                </h3>
+            </div>
+            <div class="case_description case_reflection">
+                <p>
+                    This project was harder than I anticipated since there are many different user (Member & Manager etc) and limitations. I really enjoyed how it challenged me as a designer. Even though I tried to build my products from users’ perspective, I came up with great ideas, I wanted to implement advanced search, sort, filter functions, but in reality, sometimes we just couldn’t do it. It might be because the company does not have the resource to do it or the business’s approach could not be changed just like that etc. The product didn’t have all the features I hoped for, but I was happy that I managed to build a intuitive product with lots of restrictions. 
+                </p>
+                <div class="other_cases_link_container">
+                    <a class="other_case_link" href="/rob0">rob0</a>
+                    <span class="case_link_separator">/</span>
+                    <span class="other_case_link selected_case">Lowe's</span>
+                    <span class="case_link_separator">/</span>
+                    <a class="other_case_link" href="/lowes">Earth</a>
+                    <span class="case_link_separator">/</span>
+                    <a class="other_case_link" href="/trueskin">TrueSkin</a>
+                    <span class="case_link_separator">/</span>
+                    <a class="other_case_link" href="/kiehls">Kiehl's</a>
+                    <span class="case_link_separator">/</span>
+                    <a class="other_case_link" href="/bmo">BMO</a>
+                    <span class="case_link_separator">/</span>
+                    <a class="other_case_link" href="/lamaisondesoya"> La Maison de Soya</a>
+                </div>
+            </div>
+        </div>
+</article>
