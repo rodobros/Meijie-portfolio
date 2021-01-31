@@ -32,4 +32,8 @@ $(document).ready(function() {
 	$("#case_6").click(() => {
 		router.goToCase6Page();
 	})
+
+	$("#case_8").click(() => {
+		router.goToCase8Page();
+	})
 });

@@ -894,19 +894,38 @@ article {
   color: #f3f4f2;
 }
 .background_color_case6 {
-  background-color: #2D9CDB;
+  background-color: #CADDED;
 }
 .case6_border_bottom_color {
-  border-bottom: 5px solid #2D9CDB;
+  border-bottom: 5px solid #CADDED;
 }
 .case6_color {
-  color: #2D9CDB;
+  color: #CADDED;
 }
-.right_colored_title {
+.case6_colored_title {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  color: #2D9CDB;
+  color: #CADDED;
+}
+.background_color_case8 {
+  background-color: #FFE1BE;
+}
+.case8_border_bottom_color {
+  border-bottom: 5px solid #FFE1BE;
+}
+.case8_color {
+  color: #FFE1BE;
+}
+.case_description > .no_margin_p {
+  margin-bottom: 0;
+}
+.case8_colored_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #FD6C00;
 }
 footer {
   height: 300px;

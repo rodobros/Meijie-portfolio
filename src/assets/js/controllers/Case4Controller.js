@@ -27,30 +27,9 @@ case4Controller.init = function() {
 	})
 
 	$(window).resize(function() {
-		case4Controller.resizeStupidIframe();
+		PrototypeFrameResizer.init("invision", ".proto_iframe");
+		PrototypeFrameResizer.resize();
 	})
-	case4Controller.resizeStupidIframe();
+	PrototypeFrameResizer.init("invision", ".proto_iframe");
+	PrototypeFrameResizer.resize();
 }
-
-case4Controller.iframeOriginalWidth = 442;
-case4Controller.iframeOriginalHeight = 935;
-case4Controller.bigScreenSideOffset = 300;
-case4Controller.sideMarginsPercentage = 0.13;
-case4Controller.responsivePixelTreshold = 900;
-case4Controller.responsivePixelTresholdMax = 1400;
-
-case4Controller.resizeStupidIframe = function() {
-	var containerSize = (($( window ).width()*(1 - 2 * case4Controller.sideMarginsPercentage)));
-	if ($(window).width() > case4Controller.responsivePixelTreshold) {
-		containerSize = containerSize - case4Controller.bigScreenSideOffset;
-	}
-	if ($(window).width() >= case4Controller.responsivePixelTresholdMax) {
-		containerSize = ((case4Controller.responsivePixelTresholdMax*(1 - 2 * case4Controller.sideMarginsPercentage))) - case4Controller.bigScreenSideOffset;
-	}
-	containerSize = containerSize / 2; // divide by 2 because we have the <ul> next to the iframe which takes half the space
-	var transformRatio = (containerSize / case4Controller.iframeOriginalWidth);
-	$(".proto_iframe").css('transform', 'scale(' + transformRatio + ')');
-	$(".case_ul_1").css('height', Math.floor(case4Controller.iframeOriginalHeight * transformRatio) + 'px');
-	$(".case_ul_2").css('height', Math.floor(case4Controller.iframeOriginalHeight * transformRatio) + 'px');
-}
-

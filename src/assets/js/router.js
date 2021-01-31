@@ -50,6 +50,9 @@ router.resolveRoute = function(url) {
 		case "lowes":
 			router.loadCase6Page();
 			break;
+		case "rob0":
+			router.loadCase8Page();
+			break;
 		default:
 			router.load404Page();
 	}
@@ -164,4 +167,13 @@ router.goToCase6Page = function() {
 
 router.loadCase6Page = function() {
 	$("main").load("./case6.html");
+}
+
+router.goToCase8Page = function() {
+	router.addHistory("rob0");
+	router.loadCase8Page();
+}
+
+router.loadCase8Page = function() {
+	$("main").load("./case8.html");
 }
