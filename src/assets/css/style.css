@@ -582,6 +582,9 @@ article {
 .case_description > .center_container > .proto_gif {
   margin-bottom: 40px;
 }
+.case_description > ol {
+  display: inline-block;
+}
 .no_margin {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -644,6 +647,12 @@ article {
 }
 .case_title_description_container.more_margin_after {
   margin-bottom: 120px;
+}
+.more_margin_after {
+  margin-bottom: 120px;
+}
+.some_margin_after {
+  margin-bottom: 80px;
 }
 .less_margin_case_pair {
   margin-bottom: 40px !important;
@@ -845,6 +854,13 @@ article {
 }
 .case1_color {
   color: #f3f4f2;
+}
+.case1_colored_title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #454545;
 }
 .background_color_case2 {
   background-color: #d9edca;

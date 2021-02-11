@@ -12,7 +12,10 @@ case1Controller.init = function() {
 		["section1",
 		"section2",
 		"section3",
-		"section4",]);	
+		"section4",
+		"section5",
+		"section6",
+		"section7"]);	
 
 	$("#test_prototype_button").click(() => {
 		//scroll to bottom
