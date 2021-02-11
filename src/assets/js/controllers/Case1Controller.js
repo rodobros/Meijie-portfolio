@@ -5,6 +5,7 @@ $(document).ready(function() {
 })
 
 case1Controller.init = function() {
+	console.log("calling init!")
 	headerController.setCaseSelected();
 	ImageOverlayManager.makeImageNotScrollable = false;
 	ImageOverlayManager.setUpClickListeners();

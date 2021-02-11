@@ -2,7 +2,6 @@ var router = {};
 
 router.init = function() {
 	if (router.shouldUseRoutes) {
-		window.addEventListener('load', router.routeHandler);
 		window.addEventListener('hashchange', router.routeHandler);
 		window.addEventListener('popstate', router.routeHandler);
 		$.get( "./index.html", function(data) {
@@ -65,9 +64,7 @@ router.addHistory = function(route) {
 }
 
 router.routeHandler = (evt) => {
-	console.log("evt: " + evt);
     const route = window.location.pathname.slice(1) || "/";
-    console.log("route: " + route);
     router.resolveRoute(route.toLowerCase());
 };
 
