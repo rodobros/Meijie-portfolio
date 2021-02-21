@@ -15,8 +15,7 @@ case6Controller.init = function() {
 		"section4",
         "section5",
         "section6",
-        "section7",
-        "section8"]);	
+        "section7"]);	
 
 	$("#test_prototype_button").click(() => {
 		//scroll to bottom
@@ -30,9 +29,9 @@ case6Controller.init = function() {
 	})
 
 	$(window).resize(function() {
-		PrototypeFrameResizer.init("invision", ".proto_iframe");
+		PrototypeFrameResizer.init("figma", ".proto_iframe");
 		PrototypeFrameResizer.resize();
 	})
-	PrototypeFrameResizer.init("invision", ".proto_iframe");
+	PrototypeFrameResizer.init("figma", ".proto_iframe");
 	PrototypeFrameResizer.resize();
 }

@@ -654,6 +654,15 @@ article {
 .some_margin_after {
   margin-bottom: 80px;
 }
+.small_margin_after {
+  margin-bottom: 40px;
+}
+.very_small_margin_after {
+  margin-bottom: 20px;
+}
+p.very_small_margin_after {
+  margin-bottom: 20px;
+}
 .less_margin_case_pair {
   margin-bottom: 40px !important;
 }
@@ -922,7 +931,7 @@ article {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  color: #CADDED;
+  color: #0D67B2;
 }
 .background_color_case8 {
   background-color: #FFE1BE;
@@ -937,6 +946,7 @@ article {
   margin-bottom: 0;
 }
 .case8_colored_title {
+  display: inline-block;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;

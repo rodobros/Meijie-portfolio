@@ -15,14 +15,18 @@ PrototypeFrameResizer.init = function(prototypeType, jquerySelector) {
         case "invision":
             PrototypeFrameResizer.iframeOriginalWidth = 442;
             PrototypeFrameResizer.iframeOriginalHeight = 935;
-            PrototypeFrameResizer.bigScreenSideOffset = 300;
-            PrototypeFrameResizer.sideMarginsPercentage = 0.13;
-            PrototypeFrameResizer.responsivePixelTreshold = 900;
-            PrototypeFrameResizer.responsivePixelTresholdMax = 1400;
+        break;
+        case "figma":
+            PrototypeFrameResizer.iframeOriginalWidth = 450;
+            PrototypeFrameResizer.iframeOriginalHeight = 1000;
         break;
         default:
             console.log("invalid prototype type!");
     }
+    PrototypeFrameResizer.bigScreenSideOffset = 300;
+    PrototypeFrameResizer.sideMarginsPercentage = 0.13;
+    PrototypeFrameResizer.responsivePixelTreshold = 900;
+    PrototypeFrameResizer.responsivePixelTresholdMax = 1400;
 }
 
 PrototypeFrameResizer.resize = function() {
