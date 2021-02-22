@@ -439,14 +439,19 @@ article {
   width: 31%;
   height: auto;
   position: relative;
+  border-radius: 3%;
 }
 .img_row2 > .img_container > img {
   display: block;
+  border-radius: 3%;
   width: 100%;
 }
 .img_row2 > .img_container > .main_page_img_title {
   margin-top: 5px;
   text-align: center;
+}
+.img_row2 .img_container.no_click_hover {
+  cursor: default;
 }
 #dailyui_link {
   cursor: pointer;
@@ -465,6 +470,7 @@ article {
 */
 .about_img {
   width: 100%;
+  border-radius: 5%;
   margin-bottom: 50px;
 }
 .about_text_container {
