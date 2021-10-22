@@ -52,6 +52,9 @@ router.resolveRoute = function(url) {
 		case "rob0":
 			router.loadRob0Page();
 			break;
+		case "onmoc":
+			router.loadOnMoCasePage();
+			break;
 		default:
 			router.load404Page();
 	}
@@ -173,4 +176,13 @@ router.goToRob0Page = function() {
 
 router.loadRob0Page = function() {
 	$("main").load("./Rob0.html");
+}
+
+router.goToOnMoCasePage = function() {
+	router.addHistory("onmoc");
+	router.loadOnMoCasePage();
+}
+
+router.loadOnMoCasePage = function() {
+	$("main").load("./OnMoCase.html");
 }

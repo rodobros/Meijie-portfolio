@@ -39,6 +39,8 @@
 @case5_color: #f3f4f2;
 @case6_color: #CADDED;
 @case8_color: #FFE1BE;
+@onmo_color: #E4F0EE;
+
 
 @case_margin: 300px;
 
@@ -487,6 +489,12 @@ article {
 }
 */
 
+// 4rd row:
+/*
+.row_pos_3_0 {
+}
+*/
+
 @media screen and (max-width: 900px) {
   .row_pos_0_0 {
     margin-bottom: 1%;
@@ -537,6 +545,12 @@ article {
   }
 
   .row_pos_2_2 {
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .row_pos_3_0 {
     margin-left: 1%;
     margin-right: 1%;
   }
@@ -575,11 +589,23 @@ article {
     }
     > .main_page_img_title {
       margin-top: 5px;
-      text-align: center;
+      margin-bottom: 5px;
+      text-align: left;
     }
+    padding-bottom: 10px;
   }
   .img_container.no_click_hover {
     cursor: default;
+  }
+  > .companies_img_container {
+    width: 31.0%;
+    height: auto;
+    position: relative;
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -592,7 +618,30 @@ article {
     > .img_container {
       width:100%;
     }
+    > .companies_img_container {
+      width:100%;
+    }
   }
+}
+
+.case_tag {
+  padding: 5px 15px;
+  font-size: 13px;
+  color: @text-color;
+  background-color: #F5F5F5;
+  margin-right: 7px;
+  display: inline-block;
+  /*
+  text-decoration: none;
+  cursor: pointer;
+  transition: all ease-out 0.2s;
+  */
+  border-radius: 22px;
+  border:0px;
+}
+
+.brand_container {
+  margin-bottom: 50px;
 }
 
 // ----- about page ---------
@@ -1211,6 +1260,29 @@ p.very_small_margin_after {
   margin-bottom: 0;
   color: #FD6C00;
 }
+
+// ----- OnMo Case Section -----
+.background_color_onmo {
+  background-color: @onmo_color;
+}
+
+.onmo_color {
+  color: @onmo_color;
+}
+
+.onmo_colored_title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #33776B;
+}
+
+.onmo_border_bottom_color {
+  border-bottom: 5px solid @onmo_color;
+}
+
 
 // ----- Footer Section -----
 footer {

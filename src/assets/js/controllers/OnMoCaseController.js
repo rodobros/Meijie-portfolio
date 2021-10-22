@@ -1,10 +1,10 @@
-var case1Controller = {};
+var onMoCaseController = {};
 
 $(document).ready(function() {
-	case1Controller.init();
+	onMoCaseController.init();	
 })
 
-case1Controller.init = function() {
+onMoCaseController.init = function() {
 	headerController.setCaseSelected();
 	ImageOverlayManager.makeImageNotScrollable = false;
 	ImageOverlayManager.setUpClickListeners();
@@ -13,17 +13,16 @@ case1Controller.init = function() {
 		"section2",
 		"section3",
 		"section4",
-		"section5",
-		"section6",
-		"section7"]);	
-
-	$("#test_prototype_button").click(() => {
-		//scroll to bottom
-		$([document.documentElement, document.body]).animate({
-			scrollTop: $(".proto_iframe").offset().top
-		}, 100);
+        "section5",
+        "section6",]);
+        
+    $("#test_prototype_button").click(() => {
+        //scroll to bottom
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(".proto_iframe").offset().top
+        }, 100);
 	})
-
+	
 	$(window).resize(function() {
 		PrototypeFrameResizer.init("invision", ".proto_iframe");
 		PrototypeFrameResizer.resize();

@@ -36,4 +36,8 @@ $(document).ready(function() {
 	$("#rob0").click(() => {
 		router.goToRob0Page();
 	})
+
+	$("#onmo_case").click(() => {
+		router.goToOnMoCasePage();
+	})
 });
