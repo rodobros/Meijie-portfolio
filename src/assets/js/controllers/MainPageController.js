@@ -9,31 +9,31 @@ $(document).ready(function() {
 		headerController.setDailyUISelected();
 	})
 
-	$("#case_1").click(() => {
-		router.goToCase1Page();
+	$("#earth").click(() => {
+		router.goToEarthPage();
 	})
 
-	$("#case_2").click(() => {
-		router.goToCase2Page();
+	$("#soya").click(() => {
+		router.goToSoyaPage();
 	})
 
-	$("#case_3").click(() => {
-		router.goToCase3Page();
+	$("#bmo").click(() => {
+		router.goToBmoPage();
 	})
 
-	$("#case_4").click(() => {
-		router.goToCase4Page();
+	$("#trueskin").click(() => {
+		router.goToTrueSkinPage();
 	})
 
-	$("#case_5").click(() => {
-		router.goToCase5Page();
+	$("#kiehls").click(() => {
+		router.goToKiehlsPage();
 	})
 
-	$("#case_6").click(() => {
-		router.goToCase6Page();
+	$("#lowes").click(() => {
+		router.goToLowesPage();
 	})
 
-	$("#case_8").click(() => {
-		router.goToCase8Page();
+	$("#rob0").click(() => {
+		router.goToRob0Page();
 	})
 });

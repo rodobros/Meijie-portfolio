@@ -29,28 +29,28 @@ router.resolveRoute = function(url) {
 			router.loadPhotoPage();
 			break;
 		case "earth":
-			router.loadCase1Page();
+			router.loadEarthPage();
 			break;
 		case "lamaisondesoya":
-			router.loadCase2Page();
+			router.loadSoyaPage();
 			break;
 		case "bmo":
-			router.loadCase3Page();
+			router.loadBmoPage();
 			break;
 		case "trueskin":
-			router.loadCase4Page();
+			router.loadTrueSkinPage();
 			break;
 		case "kiehls":
-			router.loadCase5Page();
+			router.loadKiehlsPage();
 			break;
 		case "dailyui":
 			router.loadDailyUIPage();
 			break;
 		case "lowes":
-			router.loadCase6Page();
+			router.loadLowesPage();
 			break;
 		case "rob0":
-			router.loadCase8Page();
+			router.loadRob0Page();
 			break;
 		default:
 			router.load404Page();
@@ -112,65 +112,65 @@ router.load404Page = function() {
 	$("main").load("./404.html");
 }
 
-router.goToCase1Page = function() {
+router.goToEarthPage = function() {
 	router.addHistory("earth");
-	router.loadCase1Page();
+	router.loadEarthPage();
 }
 
-router.loadCase1Page = function() {
-	$("main").load("./case1.html");
+router.loadEarthPage = function() {
+	$("main").load("./earth.html");
 }
 
-router.goToCase2Page = function() {
+router.goToSoyaPage = function() {
 	router.addHistory("lamaisondesoya");
-	router.loadCase2Page();
+	router.loadSoyaPage();
 }
 
-router.loadCase2Page = function() {
-	$("main").load("./case2.html");
+router.loadSoyaPage = function() {
+	$("main").load("./soya.html");
 }
 
-router.goToCase3Page = function() {
+router.goToBmoPage = function() {
 	router.addHistory("bmo");
-	router.loadCase3Page();
+	router.loadBmoPage();
 }
 
-router.loadCase3Page = function() {
-	$("main").load("./case3.html");
+router.loadBmoPage = function() {
+	$("main").load("./Bmo.html");
 }
 
-router.goToCase4Page = function() {
+router.goToTrueSkinPage = function() {
 	router.addHistory("trueskin");
-	router.loadCase4Page();
+	router.loadTrueSkinPage();
 }
 
-router.loadCase4Page = function() {
-	$("main").load("./case4.html");
+router.loadTrueSkinPage = function() {
+	$("main").load("./TrueSkin.html");
 }
 
-router.goToCase5Page = function() {
+router.goToKiehlsPage = function() {
 	router.addHistory("kiehls");
-	router.loadCase5Page();
+	router.loadKiehlsPage();
 }
 
-router.loadCase5Page = function() {
-	$("main").load("./case5.html");
+router.loadKiehlsPage = function() {
+	$("main").load("./Kiehls.html");
 }
 
-router.goToCase6Page = function() {
+router.goToLowesPage = function() {
 	router.addHistory("lowes");
-	router.loadCase6Page();
+	router.loadLowesPage();
 }
 
-router.loadCase6Page = function() {
-	$("main").load("./case6.html");
+router.loadLowesPage = function() {
+	$("main").load("./lowes.html");
 }
 
-router.goToCase8Page = function() {
+router.goToRob0Page = function() {
 	router.addHistory("rob0");
-	router.loadCase8Page();
+	router.loadRob0Page();
 }
 
-router.loadCase8Page = function() {
-	$("main").load("./case8.html");
+router.loadRob0Page = function() {
+	$("main").load("./Rob0.html");
 }
