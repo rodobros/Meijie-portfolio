@@ -40,4 +40,8 @@ $(document).ready(function() {
 	$("#onmo_case").click(() => {
 		router.goToOnMoCasePage();
 	})
+
+	$("#onmo_design").click(() => {
+		router.goToOnMoDesignPage();
+	})
 });

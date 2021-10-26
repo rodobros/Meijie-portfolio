@@ -55,6 +55,9 @@ router.resolveRoute = function(url) {
 		case "onmoc":
 			router.loadOnMoCasePage();
 			break;
+		case "onmod":
+			router.loadOnMoDesignPage();
+			break;
 		default:
 			router.load404Page();
 	}
@@ -77,7 +80,7 @@ router.goToMainPage = function(cb) {
 }
 
 router.loadMainPage = function(cb) {
-	$("main").load("./main_page.html", cb);
+	router.coolLoad("./main_page.html", cb);
 }
 
 router.goToAboutPage = function() {
@@ -86,7 +89,7 @@ router.goToAboutPage = function() {
 }
 
 router.loadAboutPage = function() {
-  	$("main").load("./about.html");
+	router.coolLoad("./about.html");
 }
 
 router.goToPhotoPage = function() {
@@ -95,11 +98,11 @@ router.goToPhotoPage = function() {
 }
 
 router.loadPhotoPage = function() {
-	$("main").load("./photo.html");
+	router.coolLoad("./photo.html");
 }
 
 router.goToResumePage = function() {
-	$("main").load("./resume.html");
+	router.coolLoad("./resume.html");
 }
 
 router.goToDailyUIPage = function () {
@@ -108,11 +111,11 @@ router.goToDailyUIPage = function () {
 }
 
 router.loadDailyUIPage = function () {
-	$("main").load("./dailyui.html");
+	router.coolLoad("./dailyui.html");
 }
 
 router.load404Page = function() {
-	$("main").load("./404.html");
+	router.coolLoad("./404.html");
 }
 
 router.goToEarthPage = function() {
@@ -121,7 +124,7 @@ router.goToEarthPage = function() {
 }
 
 router.loadEarthPage = function() {
-	$("main").load("./earth.html");
+	router.coolLoad("./earth.html");
 }
 
 router.goToSoyaPage = function() {
@@ -130,7 +133,7 @@ router.goToSoyaPage = function() {
 }
 
 router.loadSoyaPage = function() {
-	$("main").load("./soya.html");
+	router.coolLoad("./soya.html");
 }
 
 router.goToBmoPage = function() {
@@ -139,7 +142,7 @@ router.goToBmoPage = function() {
 }
 
 router.loadBmoPage = function() {
-	$("main").load("./Bmo.html");
+	router.coolLoad("./Bmo.html");
 }
 
 router.goToTrueSkinPage = function() {
@@ -148,7 +151,7 @@ router.goToTrueSkinPage = function() {
 }
 
 router.loadTrueSkinPage = function() {
-	$("main").load("./TrueSkin.html");
+	router.coolLoad("./TrueSkin.html");
 }
 
 router.goToKiehlsPage = function() {
@@ -157,7 +160,7 @@ router.goToKiehlsPage = function() {
 }
 
 router.loadKiehlsPage = function() {
-	$("main").load("./Kiehls.html");
+	router.coolLoad("./Kiehls.html");
 }
 
 router.goToLowesPage = function() {
@@ -166,7 +169,7 @@ router.goToLowesPage = function() {
 }
 
 router.loadLowesPage = function() {
-	$("main").load("./lowes.html");
+	router.coolLoad("./lowes.html");
 }
 
 router.goToRob0Page = function() {
@@ -175,7 +178,7 @@ router.goToRob0Page = function() {
 }
 
 router.loadRob0Page = function() {
-	$("main").load("./Rob0.html");
+	router.coolLoad("./Rob0.html");
 }
 
 router.goToOnMoCasePage = function() {
@@ -184,5 +187,18 @@ router.goToOnMoCasePage = function() {
 }
 
 router.loadOnMoCasePage = function() {
-	$("main").load("./OnMoCase.html");
+	router.coolLoad("./OnMoCase.html");
+}
+
+router.goToOnMoDesignPage = function() {
+	router.addHistory("onmod");
+	router.loadOnMoDesignPage();
+}
+
+router.loadOnMoDesignPage = function() {
+	router.coolLoad("./OnMoDesign.html");
+}
+
+router.coolLoad = function(htmlFile, cb) {
+	$("main").hide().load(htmlFile).fadeIn(600, cb);
 }

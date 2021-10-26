@@ -72,27 +72,45 @@ headerController.setOnclickListeners = function() {
 
 	$("#" + headerController.headerLinksIds[10]).click(() => {
 		headerController.setWorkPageSelected();
-		router.goToMainPage(function() {
+		var goToProjectFunc = function() {
 			$([document.documentElement, document.body]).animate({
-        		scrollTop: $("#case_studies").offset().top - 30
-    		}, 2);
-    		headerController.removeHam(true);
-		});
+				scrollTop: $("#case_studies").offset().top - 30
+			}, 0);
+			headerController.removeHam(true);
+		};
+		if (headerController.isOnMainPage()) {
+			goToProjectFunc();
+		} else {
+			router.goToMainPage(function() {
+				goToProjectFunc();
+			});
+		}
 	})
 	$("#" + headerController.headerLinksIds[11]).click(() => {
 		headerController.setWorkPageSelected();
-		router.goToMainPage(function() {
+		var goToProjectFunc = function() {
 			$([document.documentElement, document.body]).animate({
-        		scrollTop: $("#case_studies").offset().top - 30
-    		}, 2);
-    		headerController.removeHam(true);
-		});
-		
+				scrollTop: $("#case_studies").offset().top - 30
+			}, 0);
+			headerController.removeHam(true);
+		};
+		if (headerController.isOnMainPage()) {
+			goToProjectFunc();
+		} else {
+			router.goToMainPage(function() {
+				goToProjectFunc();
+			});
+		}
 	})
 
 	$(".ham_container").click(() => {
 		headerController.removeHam($(".ham_container").hasClass("ham_turned"));
 	})
+}
+
+headerController.isOnMainPage = function() {
+	var route = window.location.pathname.slice(1) || "/";
+	return (route == "" || route == "/" || route == "main");
 }
 
 headerController.removeHam = function(shouldRemoveHam) {
@@ -151,8 +169,10 @@ headerController.setCaseSelected = function() {
 
 $(document).ready(function() {
 	$(".logo").click(() => {
-		headerController.setWorkPageSelected();
-		router.goToMainPage();
+		if(!headerController.isOnMainPage()) {
+			headerController.setWorkPageSelected();
+			router.goToMainPage();
+		}
 	})
 	window.addEventListener('load', headerController.selectHeaderLinkFromEvent);
 	window.addEventListener('hashchange', headerController.selectHeaderLinkFromEvent);
