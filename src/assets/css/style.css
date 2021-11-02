@@ -1025,6 +1025,23 @@ p.very_small_margin_after {
 .onmo_border_bottom_color {
   border-bottom: 5px solid #E4F0EE;
 }
+.background_color_onmod {
+  background-color: #FFE1BE;
+}
+.onmod_color {
+  color: #FFE1BE;
+}
+.onmod_colored_title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: black;
+}
+.onmod_border_bottom_color {
+  border-bottom: 5px solid #FFE1BE;
+}
 footer {
   height: 300px;
   position: absolute;

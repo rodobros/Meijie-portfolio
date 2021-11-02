@@ -200,5 +200,9 @@ router.loadOnMoDesignPage = function() {
 }
 
 router.coolLoad = function(htmlFile, cb) {
-	$("main").hide().load(htmlFile).fadeIn(600, cb);
+	//window.scrollTo(0,0);
+	$("main").hide().load(htmlFile, cb).animate({
+		scrollTop: $(".header-container").offset().top
+	}, 1).fadeTo(600, 1, cb)
+	//$("main").hide().load(htmlFile).fadeIn(600, cb);
 }

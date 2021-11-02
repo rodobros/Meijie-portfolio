@@ -39,9 +39,10 @@ caseSideNavManager.init = function(sectionsId) {
     	}, 125);
 	})
 
-	$([document.documentElement, document.body]).animate({
-       	scrollTop: $(".header-container").offset().top
-    }, 2);
+	// TODO: Put this back only if router is not happy about animate/fadeTo
+	// $([document.documentElement, document.body]).animate({
+    //    	scrollTop: $(".header-container").offset().top
+    // }, 2);
 }
 
 caseSideNavManager.makeSectionVisible = function(sectionNumber) {
