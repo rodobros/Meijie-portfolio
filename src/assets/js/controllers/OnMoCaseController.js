@@ -2,6 +2,8 @@ var onMoCaseController = {};
 
 $(document).ready(function() {
 	onMoCaseController.init();	
+
+	window.scrollTo(0,0);
 })
 
 onMoCaseController.init = function() {
@@ -13,21 +15,5 @@ onMoCaseController.init = function() {
 		"section2",
 		"section3",
 		"section4",
-        "section5",
-        "section6",]);
-        
-    $("#test_prototype_button").click(() => {
-        //scroll to bottom
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(".proto_iframe").offset().top
-        }, 100);
-	})
-	
-	$(window).resize(function() {
-		PrototypeFrameResizer.init("invision", ".proto_iframe");
-		PrototypeFrameResizer.resize();
-	})
-
-	PrototypeFrameResizer.init("invision", ".proto_iframe");
-	PrototypeFrameResizer.resize();
+        "section5",]);
 }

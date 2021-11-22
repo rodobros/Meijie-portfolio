@@ -2,6 +2,8 @@ var case8Controller = {};
 
 $(document).ready(function() {
 	case8Controller.init();	
+
+	window.scrollTo(0,0);
 })
 
 case8Controller.init = function() {
