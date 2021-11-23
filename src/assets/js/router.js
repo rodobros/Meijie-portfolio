@@ -82,7 +82,7 @@ router.goToMainPage = function(cb) {
 }
 
 router.loadMainPage = function(cb) {
-	router.coolLoad("./main_page.html", cb);
+	$("main").hide().load("./main_page.html", cb).fadeTo(600, 1)
 }
 
 router.goToAboutPage = function() {
@@ -201,8 +201,8 @@ router.loadOnMoDesignPage = function() {
 	router.coolLoad("./OnMoDesign.html");
 }
 
-router.coolLoad = function(htmlFile, cb) {
-	$("main").hide().load(htmlFile, cb).animate({
+router.coolLoad = function(htmlFile) {
+	$("main").hide().load(htmlFile).animate({
 		scrollTop: $(".header-container").offset().top
-	}, 1).fadeTo(600, 1, cb)
+	}, 1).fadeTo(600, 1)
 }
