@@ -2,8 +2,6 @@ var onMoCaseController = {};
 
 $(document).ready(function() {
 	onMoCaseController.init();	
-
-	window.scrollTo(0,0);
 })
 
 onMoCaseController.init = function() {

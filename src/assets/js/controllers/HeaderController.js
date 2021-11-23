@@ -189,7 +189,11 @@ headerController.selectHeaderLinkFromEvent = function(evt) {
 		case "photo":
 			headerController.selectHeaderLink(headerController.headerLinksIds[2]);
 			break;
-		case "mirror":
+		case "earth":
+		case "lowes":
+		case "rob0":
+		case "onmoc":
+		case "onmod":
 		case "lamaisondesoya":
 		case "bmo":
 		case "trueskin":

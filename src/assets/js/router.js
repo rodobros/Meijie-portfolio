@@ -4,13 +4,15 @@ router.init = function() {
 	if (router.shouldUseRoutes) {
 		window.addEventListener('hashchange', router.routeHandler);
 		window.addEventListener('popstate', router.routeHandler);
+		/*
 		$.get( "./index.html", function(data) {
 			router.index = data;
 		});
+		*/
 	}
 }
 
-router.index = ""
+//router.index = ""
 
 router.shouldUseRoutes = true;
 
@@ -65,7 +67,7 @@ router.resolveRoute = function(url) {
 
 router.addHistory = function(route) {
 	if (router.shouldUseRoutes) {
-		window.history.pushState({"html": router.index, "pageTitle":"ignored"},"", route);
+		window.history.pushState({"pageTitle":"ignored"},"", route);
 	}
 }
 
@@ -124,7 +126,7 @@ router.goToEarthPage = function() {
 }
 
 router.loadEarthPage = function() {
-	router.coolLoad("./earth.html");
+	router.coolLoad("./Earth.html");
 }
 
 router.goToSoyaPage = function() {
@@ -133,7 +135,7 @@ router.goToSoyaPage = function() {
 }
 
 router.loadSoyaPage = function() {
-	router.coolLoad("./soya.html");
+	router.coolLoad("./Soya.html");
 }
 
 router.goToBmoPage = function() {
@@ -169,7 +171,7 @@ router.goToLowesPage = function() {
 }
 
 router.loadLowesPage = function() {
-	router.coolLoad("./lowes.html");
+	router.coolLoad("./Lowes.html");
 }
 
 router.goToRob0Page = function() {
@@ -200,13 +202,7 @@ router.loadOnMoDesignPage = function() {
 }
 
 router.coolLoad = function(htmlFile, cb) {
-	//window.scrollTo(0,0);
-	/*
 	$("main").hide().load(htmlFile, cb).animate({
 		scrollTop: $(".header-container").offset().top
 	}, 1).fadeTo(600, 1, cb)
-	*/
-
-	$("main").load(htmlFile, cb)
-	//$("main").hide().load(htmlFile).fadeIn(600, cb);
 }
