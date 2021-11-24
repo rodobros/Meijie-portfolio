@@ -4,15 +4,8 @@ router.init = function() {
 	if (router.shouldUseRoutes) {
 		window.addEventListener('hashchange', router.routeHandler);
 		window.addEventListener('popstate', router.routeHandler);
-		/*
-		$.get( "./index.html", function(data) {
-			router.index = data;
-		});
-		*/
 	}
 }
-
-//router.index = ""
 
 router.shouldUseRoutes = true;
 
@@ -82,7 +75,7 @@ router.goToMainPage = function(cb) {
 }
 
 router.loadMainPage = function(cb) {
-	$("main").hide().load("./main_page.html", cb).fadeTo(600, 1)
+	$("main").hide().load("./main_page.html", cb).fadeTo(200, 1);
 }
 
 router.goToAboutPage = function() {
@@ -201,8 +194,9 @@ router.loadOnMoDesignPage = function() {
 	router.coolLoad("./OnMoDesign.html");
 }
 
-router.coolLoad = function(htmlFile) {
-	$("main").hide().load(htmlFile).animate({
-		scrollTop: $(".header-container").offset().top
-	}, 1).fadeTo(600, 1)
+router.coolLoad = function(htmlFile) {	
+	$("main").hide().load(htmlFile, function() {
+		window.scroll(0,0);
+		$("main").fadeTo(200, 1);
+	});
 }
