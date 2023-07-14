@@ -44,4 +44,12 @@ $(document).ready(function() {
 	$("#onmo_design").click(() => {
 		router.goToOnMoDesignPage();
 	})
+
+	$("#tdi").click(() => {
+		router.goToTDPage();
+	})
+
+	$("#mortgage").click(() => {
+		router.goToMortgageCadencePage();
+	})
 });

@@ -41,6 +41,7 @@
 @case8_color: #FFE1BE;
 @onmo_color: #E4F0EE;
 @onmod_color: #FFE1BE;
+@mortgage_color: #E4F0EE; // TODO
 
 
 
@@ -1283,6 +1284,50 @@ p.very_small_margin_after {
 
 .onmo_border_bottom_color {
   border-bottom: 5px solid @onmo_color;
+}
+
+// ----- Mortgage Cadence Case Section -----
+.background_color_mortgage {
+  background-color: @mortgage_color;
+}
+
+.mortgage_color {
+  color: @mortgage_color;
+}
+
+.mortgage_colored_title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #33776B; // TODO
+}
+
+.mortgage_border_bottom_color {
+  border-bottom: 5px solid @mortgage_color;
+}
+
+// ----- TD Case Section -----
+.background_color_mortgage {
+  background-color: @td_color;
+}
+
+.td_color {
+  color: @td_color;
+}
+
+.td_colored_title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #33776B; // TODO
+}
+
+.td_border_bottom_color {
+  border-bottom: 5px solid @td_color;
 }
 
 // ----- OnMoDesign Case Section -----

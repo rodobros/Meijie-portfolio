@@ -183,21 +183,23 @@ headerController.selectHeaderLinkFromEvent = function(evt) {
 	const route = window.location.pathname.slice(1) || "/";
 	headerController.removeSelectedHeaderLink();
 	switch(route) {
-		case "about":
+		case router.history.about:
 			headerController.selectHeaderLink(headerController.headerLinksIds[1]);
 			break;
-		case "photo":
+		case router.history.photo:
 			headerController.selectHeaderLink(headerController.headerLinksIds[2]);
 			break;
-		case "earth":
-		case "lowes":
-		case "rob0":
-		case "onmoc":
-		case "onmod":
-		case "lamaisondesoya":
-		case "bmo":
-		case "trueskin":
-		case "kiehls":
+		case router.history.earth:
+		case router.history.lowes:
+		case router.history.rob0:
+		case router.history.onmoc:
+		case router.history.onmod:
+		case router.history.lamaisondesoya:
+		case router.history.bmo:
+		case router.history.trueskin:
+		case router.history.kiehls:
+		case router.history.mortgage:
+		case router.history.td:
 			headerController.selectHeaderLink(headerController.headerLinksIds[10]);
 		break;
 		default:

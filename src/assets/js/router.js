@@ -9,49 +9,72 @@ router.init = function() {
 
 router.shouldUseRoutes = true;
 
+router.history = {};
+router.history.main = "main";
+router.history.about = "about";
+router.history.photo = "photo";
+router.history.earth = "earth";
+router.history.lamaisondesoya = "lamaisondesoya";
+router.history.bmo = "bmo";
+router.history.trueskin = "trueskin";
+router.history.kiehls = "kiehls";
+router.history.dailyui = "dailyui";
+router.history.lowes = "lowes";
+router.history.rob0 = "rob0";
+router.history.onmoc = "onmoc";
+router.history.onmod = "onmod";
+router.history.mortgage = "mortgage";
+router.history.td = "td";
+
 router.resolveRoute = function(url) {
 	var urlToLow = url.toLowerCase();
 	switch(urlToLow) {
 		case "":
 		case "/":
-		case "main":
+		case router.history.main:
 			router.loadMainPage();
 			break;
-		case "about":
+		case router.history.about:
 			router.loadAboutPage();
 			break;
-		case "photo":
+		case router.history.photo:
 			router.loadPhotoPage();
 			break;
-		case "earth":
+		case router.history.earth:
 			router.loadEarthPage();
 			break;
-		case "lamaisondesoya":
+		case router.history.lamaisondesoya:
 			router.loadSoyaPage();
 			break;
-		case "bmo":
+		case router.history.bmo:
 			router.loadBmoPage();
 			break;
-		case "trueskin":
+		case router.history.trueskin:
 			router.loadTrueSkinPage();
 			break;
-		case "kiehls":
+		case router.history.kiehls:
 			router.loadKiehlsPage();
 			break;
-		case "dailyui":
+		case router.history.dailyui:
 			router.loadDailyUIPage();
 			break;
-		case "lowes":
+		case router.history.lowes:
 			router.loadLowesPage();
 			break;
-		case "rob0":
+		case router.history.rob0:
 			router.loadRob0Page();
 			break;
-		case "onmoc":
+		case router.history.onmoc:
 			router.loadOnMoCasePage();
 			break;
-		case "onmod":
+		case router.history.onmod:
 			router.loadOnMoDesignPage();
+			break;
+		case router.history.mortgage:
+			router.loadMortgageCadencePage();
+			break;
+		case router.history.td:
+			router.loadTDPage();
 			break;
 		default:
 			router.load404Page();
@@ -79,7 +102,7 @@ router.loadMainPage = function(cb) {
 }
 
 router.goToAboutPage = function() {
-	router.addHistory("about");
+	router.addHistory(router.history.about);
 	router.loadAboutPage();
 }
 
@@ -88,7 +111,7 @@ router.loadAboutPage = function() {
 }
 
 router.goToPhotoPage = function() {
-	router.addHistory("photo");
+	router.addHistory(router.history.photo);
 	router.loadPhotoPage();
 }
 
@@ -96,12 +119,8 @@ router.loadPhotoPage = function() {
 	router.coolLoad("./photo.html");
 }
 
-router.goToResumePage = function() {
-	router.coolLoad("./resume.html");
-}
-
 router.goToDailyUIPage = function () {
-	router.addHistory("dailyui");
+	router.addHistory(router.history.dailyui);
 	router.loadDailyUIPage();
 }
 
@@ -114,7 +133,7 @@ router.load404Page = function() {
 }
 
 router.goToEarthPage = function() {
-	router.addHistory("earth");
+	router.addHistory(router.history.earth);
 	router.loadEarthPage();
 }
 
@@ -123,7 +142,7 @@ router.loadEarthPage = function() {
 }
 
 router.goToSoyaPage = function() {
-	router.addHistory("lamaisondesoya");
+	router.addHistory(router.history.lamaisondesoya);
 	router.loadSoyaPage();
 }
 
@@ -132,7 +151,7 @@ router.loadSoyaPage = function() {
 }
 
 router.goToBmoPage = function() {
-	router.addHistory("bmo");
+	router.addHistory(router.history.bmo);
 	router.loadBmoPage();
 }
 
@@ -141,7 +160,7 @@ router.loadBmoPage = function() {
 }
 
 router.goToTrueSkinPage = function() {
-	router.addHistory("trueskin");
+	router.addHistory(router.history.trueskin);
 	router.loadTrueSkinPage();
 }
 
@@ -150,7 +169,7 @@ router.loadTrueSkinPage = function() {
 }
 
 router.goToKiehlsPage = function() {
-	router.addHistory("kiehls");
+	router.addHistory(router.history.kiehls);
 	router.loadKiehlsPage();
 }
 
@@ -159,7 +178,7 @@ router.loadKiehlsPage = function() {
 }
 
 router.goToLowesPage = function() {
-	router.addHistory("lowes");
+	router.addHistory(router.history.lowes);
 	router.loadLowesPage();
 }
 
@@ -168,7 +187,7 @@ router.loadLowesPage = function() {
 }
 
 router.goToRob0Page = function() {
-	router.addHistory("rob0");
+	router.addHistory(router.history.rob0);
 	router.loadRob0Page();
 }
 
@@ -177,7 +196,7 @@ router.loadRob0Page = function() {
 }
 
 router.goToOnMoCasePage = function() {
-	router.addHistory("onmoc");
+	router.addHistory(router.history.onmoc);
 	router.loadOnMoCasePage();
 }
 
@@ -186,12 +205,30 @@ router.loadOnMoCasePage = function() {
 }
 
 router.goToOnMoDesignPage = function() {
-	router.addHistory("onmod");
+	router.addHistory(router.history.onmod);
 	router.loadOnMoDesignPage();
 }
 
 router.loadOnMoDesignPage = function() {
 	router.coolLoad("./OnMoDesign.html");
+}
+
+router.goToMortgageCadencePage = function() {
+	router.addHistory(router.history.mortgage);
+	router.loadMortgageCadencePage();
+}
+
+router.loadMortgageCadencePage = function() {
+	router.coolLoad("./MortgageCadence.html");
+}
+
+router.goToTDPage = function() {
+	router.addHistory(router.history.td);
+	router.loadTDPage();
+}
+
+router.loadTDPage = function() {
+	router.coolLoad("./TD.html");
 }
 
 router.coolLoad = function(htmlFile) {	
