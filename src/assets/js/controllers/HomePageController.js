@@ -25,10 +25,6 @@ $(document).ready(function() {
 		router.goToTrueSkinPage();
 	})
 
-	$("#kiehls").click(() => {
-		router.goToKiehlsPage();
-	})
-
 	$("#lowes").click(() => {
 		router.goToLowesPage();
 	})

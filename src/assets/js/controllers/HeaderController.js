@@ -197,7 +197,6 @@ headerController.selectHeaderLinkFromEvent = function(evt) {
 		case router.history.lamaisondesoya:
 		case router.history.bmo:
 		case router.history.trueskin:
-		case router.history.kiehls:
 		case router.history.mortgage:
 		case router.history.td:
 			headerController.selectHeaderLink(headerController.headerLinksIds[10]);

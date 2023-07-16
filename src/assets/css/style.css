@@ -718,6 +718,9 @@ article {
 p.very_small_margin_after {
   margin-bottom: 20px;
 }
+p.tiny_margin_after {
+  margin-bottom: 10px;
+}
 .less_margin_case_pair {
   margin-bottom: 40px !important;
 }
@@ -1024,6 +1027,40 @@ p.very_small_margin_after {
 }
 .onmo_border_bottom_color {
   border-bottom: 5px solid #E4F0EE;
+}
+.background_color_mortgage {
+  background-color: #A6C7EC;
+}
+.mortgage_color {
+  color: #A6C7EC;
+}
+.mortgage_colored_title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #006EFF;
+}
+.mortgage_border_bottom_color {
+  border-bottom: 5px solid #A6C7EC;
+}
+.background_color_mortgage {
+  background-color: #008A00;
+}
+.td_color {
+  color: #008A00;
+}
+.td_colored_title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #33776B;
+}
+.td_border_bottom_color {
+  border-bottom: 5px solid #008A00;
 }
 .background_color_onmod {
   background-color: #FFE1BE;

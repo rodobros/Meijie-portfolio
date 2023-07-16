@@ -11,7 +11,7 @@ $(document).ready(() => {
 	let imagesPerColum = Math.ceil(PhotoPageController.numberOfPeopleImages / PhotoPageController.numberOfColumn);
 	if ($(".photo_page_container_people div").length == 0) {
 		for(var i = 1 ; i < PhotoPageController.numberOfPeopleImages + 1 ; ++i) {
-			intermediateHtml += "<img class=\"click_to_overlay\" src=\"./assets/img/photo_page/People/" + i + ".jpg\">";
+			intermediateHtml += "<img class=\"click_to_overlay\" loading=\"lazy\" src=\"./assets/img/photo_page/People/" + i + ".jpg\">";
 			if (i % imagesPerColum == 0 || i == PhotoPageController.numberOfPeopleImages){
 				finalHtml += "<div class=\"photo_column" 
 					+ ((i / imagesPerColum == 1) ? " photo_left_column": "")
@@ -28,7 +28,7 @@ $(document).ready(() => {
 	imagesPerColum = Math.ceil(PhotoPageController.numberOfLandscapeImages / PhotoPageController.numberOfColumn);
 	if ($(".photo_page_container_landscape div").length == 0) {
 		for(var i = 1 ; i < PhotoPageController.numberOfLandscapeImages + 1 ; ++i) {
-			intermediateHtml += "<img class=\"click_to_overlay\" src=\"./assets/img/photo_page/Landscape/" + i + ".jpg\">";
+			intermediateHtml += "<img class=\"click_to_overlay\" loading=\"lazy\" src=\"./assets/img/photo_page/Landscape/" + i + ".jpg\">";
 			if (i % imagesPerColum == 0 || i == PhotoPageController.numberOfLandscapeImages){
 				finalHtml += "<div class=\"photo_column" 
 				+ ((i / imagesPerColum == 1) ? " photo_left_column": "")
@@ -45,7 +45,7 @@ $(document).ready(() => {
 	imagesPerColum = Math.ceil(PhotoPageController.numberOfFoodImages / PhotoPageController.numberOfColumn);
 	if ($(".photo_page_container_food div").length == 0) {
 		for(var i = 1 ; i < PhotoPageController.numberOfFoodImages + 1 ; ++i) {
-			intermediateHtml += "<img class=\"click_to_overlay\" src=\"./assets/img/photo_page/Food/" + i + ".jpg\">";
+			intermediateHtml += "<img class=\"click_to_overlay\" loading=\"lazy\" src=\"./assets/img/photo_page/Food/" + i + ".jpg\">";
 			if (i % imagesPerColum == 0 || i == PhotoPageController.numberOfFoodImages){
 				finalHtml += "<div class=\"photo_column" 
 				+ ((i / imagesPerColum == 1) ? " photo_left_column": "")

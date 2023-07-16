@@ -17,7 +17,6 @@ router.history.earth = "earth";
 router.history.lamaisondesoya = "lamaisondesoya";
 router.history.bmo = "bmo";
 router.history.trueskin = "trueskin";
-router.history.kiehls = "kiehls";
 router.history.dailyui = "dailyui";
 router.history.lowes = "lowes";
 router.history.rob0 = "rob0";
@@ -51,9 +50,6 @@ router.resolveRoute = function(url) {
 			break;
 		case router.history.trueskin:
 			router.loadTrueSkinPage();
-			break;
-		case router.history.kiehls:
-			router.loadKiehlsPage();
 			break;
 		case router.history.dailyui:
 			router.loadDailyUIPage();
@@ -98,7 +94,7 @@ router.goToMainPage = function(cb) {
 }
 
 router.loadMainPage = function(cb) {
-	$("main").hide().load("./main_page.html", cb).fadeTo(200, 1);
+	$("main").hide().load("./Home.html", cb).fadeTo(200, 1);
 }
 
 router.goToAboutPage = function() {
@@ -107,7 +103,7 @@ router.goToAboutPage = function() {
 }
 
 router.loadAboutPage = function() {
-	router.coolLoad("./about.html");
+	router.coolLoad("./About.html");
 }
 
 router.goToPhotoPage = function() {
@@ -116,7 +112,7 @@ router.goToPhotoPage = function() {
 }
 
 router.loadPhotoPage = function() {
-	router.coolLoad("./photo.html");
+	router.coolLoad("./Photo.html");
 }
 
 router.goToDailyUIPage = function () {
@@ -125,7 +121,7 @@ router.goToDailyUIPage = function () {
 }
 
 router.loadDailyUIPage = function () {
-	router.coolLoad("./dailyui.html");
+	router.coolLoad("./DailyUi.html");
 }
 
 router.load404Page = function() {
@@ -166,15 +162,6 @@ router.goToTrueSkinPage = function() {
 
 router.loadTrueSkinPage = function() {
 	router.coolLoad("./TrueSkin.html");
-}
-
-router.goToKiehlsPage = function() {
-	router.addHistory(router.history.kiehls);
-	router.loadKiehlsPage();
-}
-
-router.loadKiehlsPage = function() {
-	router.coolLoad("./Kiehls.html");
 }
 
 router.goToLowesPage = function() {
